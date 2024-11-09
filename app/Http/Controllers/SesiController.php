@@ -10,6 +10,12 @@ class SesiController extends Controller
     function index()
     {
 
+        return view('welcome');
+
+    }
+    function index2()
+    {
+
         return view('login');
 
     }

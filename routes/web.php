@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(['guest'])->group(function(){
 
     Route::get('/',[SesiController::class, 'index'])->name('login');
+    Route::get('/login',[SesiController::class, 'index2'])->name('login2');
 Route::post('/',[SesiController::class, 'login']);
 
 });

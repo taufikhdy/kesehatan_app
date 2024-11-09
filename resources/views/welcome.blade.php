@@ -31,7 +31,7 @@
     <img src="{{ asset('klinik.gif') }}" alt="Loading...">
     <script>
         setTimeout(function () {
-            window.location.href = "{{ route('login') }}";
+            window.location.href = "{{ route('login2') }}";
         }, 3001);
     </script>
 </body>
