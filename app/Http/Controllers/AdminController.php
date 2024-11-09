@@ -9,19 +9,19 @@ class AdminController extends Controller
 {
     function index()
     {
-        return view('admin');
-        
-    }
-    function operator()
-    {
-        return view('admin');
+        return view('welcome');
 
-    } function keuangan()
-    {
-        return view('admin');
     }
-    function marketing()
+    function uks_siswa()
     {
-        return view('admin');
+        return view('uks_siswa');
+
+    } function uks_siswi()
+    {
+        return view('uks_siswi');
+    }
+    function poskes()
+    {
+        return view('poskes');
     }
 }

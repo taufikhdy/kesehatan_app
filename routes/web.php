@@ -29,9 +29,9 @@ Route::get('/home',function(){
 
 Route::middleware(['auth'])->group(function(){
     Route::get('/admin',[AdminController::class,'index']);
-    Route::get('/admin/operator',[AdminController::class,'operator'])->middleware(('userAkses:operator'));
-    Route::get('/admin/keuangan',[AdminController::class,'keuangan'])->middleware(('userAkses:keuangan'));
-    Route::get('/admin/marketing',[AdminController::class,'marketing'])->middleware(('userAkses:marketing'));
+    Route::get('/admin/uks_siswa',[AdminController::class,'uks_siswa'])->middleware(('userAkses:uks_siswa'));
+    Route::get('/admin/uks_siswi',[AdminController::class,'uks_siswi'])->middleware(('userAkses:uks_siswi'));
+    Route::get('/admin/poskes',[AdminController::class,'poskes'])->middleware(('userAkses:poskes'));
     Route::get('/logout',[SesiController::class,'logout']);
 
 });

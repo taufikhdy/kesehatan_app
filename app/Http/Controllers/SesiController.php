@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class SesiController extends Controller
 {
-    function index() 
+    function index()
     {
 
         return view('login');
@@ -28,12 +28,12 @@ class SesiController extends Controller
          ];
 
          if(Auth::attempt($infologin)){
-           if(Auth::user()->role == 'operator'){
-            return redirect('admin/operator');
-         } elseif(Auth::user()->role == 'keuangan'){
-            return redirect('admin/keuangan');
-         }elseif(Auth::user()->role == 'marketing'){
-            return redirect('admin/marketing');
+           if(Auth::user()->role == 'uks_siswa'){
+            return redirect('admin/uks_siswa');
+         } elseif(Auth::user()->role == 'uks_siswi'){
+            return redirect('admin/uks_siswi');
+         }elseif(Auth::user()->role == 'poskes'){
+            return redirect('admin/poskes');
          }
          }else{
             return redirect('')->withErrors('username dan password yang dimasukan tidak sesuai')->withInput();
