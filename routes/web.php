@@ -4,6 +4,10 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SesiController;
 use Illuminate\Support\Facades\Route;
 
+//RUTE UKS
+
+use App\Http\Controllers\uksController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,3 +40,9 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/logout',[SesiController::class,'logout']);
 
 });
+
+Route::get('ukssiswa', [uksController::class, 'ukssiswa'])->name('ukssiswa');
+Route::get('ukssiswi', [uksController::class, 'ukssiswi'])->name('ukssiswi');
+
+Route::get('pasiensiswa',[uksController::class,'tmbhsiswa'])->name('tmbhsiswa');
+Route::get('pasiensiswi',[uksController::class,'tmbhsiswi'])->name('tmbhsiswi');

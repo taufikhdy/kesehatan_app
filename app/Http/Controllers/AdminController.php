@@ -14,11 +14,11 @@ class AdminController extends Controller
     }
     function uks_siswa()
     {
-        return view('uks_siswa');
+        return view('uks_siswa.ukssiswa');
 
     } function uks_siswi()
     {
-        return view('uks_siswi');
+        return view('uks_siswi.ukssiswi');
     }
     function poskes()
     {
