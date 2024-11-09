@@ -19,6 +19,13 @@ class SesiController extends Controller
         return view('login');
 
     }
+
+    function landing()
+    {
+
+        return view('homepage.index');
+
+    }
     function login(Request $request){
         $request->validate([
             'email'=>'required',
