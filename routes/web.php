@@ -25,7 +25,7 @@ Route::middleware(['guest'])->group(function(){
 
     Route::get('/',[SesiController::class, 'index'])->name('login');
     Route::get('/login',[SesiController::class, 'index2'])->name('login2');
-    Route::post('/login',[SesiController::class, 'login']);
+Route::post('/login',[SesiController::class, 'login'])->name('real.login');
 
 });
 Route::get('/home',function(){
