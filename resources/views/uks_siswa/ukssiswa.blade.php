@@ -19,7 +19,7 @@
     <!-- plugin css for this page -->
     <!-- End plugin css for this page -->
     <!-- inject:css -->
-    <link rel="stylesheet" href="{{ asset('template-admin/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('landing/vendor/bootstrap/css/bootstrap.min.css') }}">
     <!-- endinject -->
     <link rel="shortcut icon" href="{{ asset('image/logo.png') }}" />
 
