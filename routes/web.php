@@ -41,6 +41,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/logout',[SesiController::class,'logout']);
 
 });
+Route::get('home',[SesiController::class, 'landing'])->name('landing');
 
 Route::get('ukssiswa', [UKSController::class, 'index'])->name('ukssiswa');
 Route::get('tmbhsiswa', [UKSController::class, 'tambah'])->name('tmbhsiswa');
