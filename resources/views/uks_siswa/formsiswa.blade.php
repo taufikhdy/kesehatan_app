@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="{{ asset('template-admin/css/style.css') }}">
     <!-- endinject -->
     <link rel="shortcut icon" href="{{ asset('image/logo.png') }}" />
+
+    {{-- link jquery --}}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -42,31 +45,42 @@
                         {{ session('success') }}
                     </div>
                 @endif --}}
-                <form action="" method="POST">
+                <form action="{{ route('tambah')}}" method="POST">
                     @csrf
-                    <div class="mb-3">
-                        <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
-                        <input type="text" name="nama_lengkap" id="nama_lengkap"
-                            class="form-control @error('nama_lengkap') is-invalid @enderror" required>
-                        @error('nama')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                    </div>
 
                     <div class="mb-3">
                         <label for="kelas" class="form-label">Kelas</label>
-                        <input type="text" name="kelas" id="kelas"
+                        <select name="kelas" id="kelas"
                             class="form-control @error('kelas') is-invalid @enderror" required>
+
+                            <option value="">Pilih Kelas</option>
+
+                        @foreach ($data as $no=>$kelas)
+
+                        <option value="{{$kelas->kelas}}">{{$kelas->kelas}}</option>
+
+                        @endforeach
+
+                        </select>
+
                         @error('kelas')
-                            <div class="invalid-feedback">{{ $message }}</div>
+                        <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
 
                     <div class="mb-3">
                         <label for="wali_kelas" class="form-label">Wali Kelas</label>
-                        <input type="text" name="wali_kelas" id="wali_kelas"
-                            class="form-control @error('wali_kelas') is-invalid @enderror" required>
+                        <input type="text" name="wali_kelas" id="wali_kelas" class="form-control @error('wali_kelas') is-invalid @enderror" required value="" placeholder="Wali Kelas" readonly>
                         @error('wali_kelas')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="nama" class="form-label">Nama Lengkap</label>
+                        <input type="text" name="nama" id="nama"
+                            class="form-control @error('nama') is-invalid @enderror" required>
+                        @error('nama')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
@@ -81,11 +95,11 @@
                     </div>
 
                     <div class="mb-5 mt-5">
-                        <label for="status_pengobatan" class="form-label">Status Pengobatan</label>
-                        <input type="text" name="status_pengobatan" id="status_pengobatan"
-                            class="form-control @error('status_pengobatan') is-invalid @enderror" required readonly
+                        <label for="status" class="form-label">Status Pengobatan</label>
+                        <input type="text" name="status" id="status"
+                            class="form-control @error('status') is-invalid @enderror" required readonly
                             value="Belum Berobat">
-                        @error('status_pengobatan')
+                        @error('status')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
 
@@ -94,10 +108,10 @@
                     </div>
 
                     <div class="mb-5">
-                        <label for="tanggal_sakit" class="form-label">Tanggal Sakit</label>
-                        <input type="date" name="tanggal_sakit" id="tanggal_sakit"
-                            class="form-control @error('tanggal_sakit') is-invalid @enderror" required>
-                        @error('tanggal_sakit')
+                        <label for="tanggal" class="form-label">Tanggal Sakit</label>
+                        <input type="date" name="tanggal" id="tanggal"
+                            class="form-control @error('tanggal') is-invalid @enderror" required>
+                        @error('tanggal')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
@@ -133,6 +147,35 @@
 
     <!-- End custom js for this page-->
     <script src="{{ asset('argon/assets/js/core/bootstrap.min.js') }}"></script>
+
+
+
+
+    <script>
+        // Menggunakan jQuery untuk menangani perubahan pada select kelas
+        $('#kelas').change(function() {
+            var kelas = $(this).val();  // Mendapatkan ID kelas yang dipilih
+
+            if (kelas) {
+                // Jika ada kelas yang dipilih, lakukan request ke server
+                $.ajax({
+                    url: '/get-teacher/' + kelas,  // URL untuk mengambil wali kelas
+                    method: 'GET',
+                    success: function(response) {
+                        // Jika ada wali kelas, tampilkan di input text
+                        if (response.wali_kelas) {
+                            $('#wali_kelas').val(response.wali_kelas);  // Menampilkan nama wali kelas di input text
+                        } else {
+                            $('#wali_kelas').val('');  // Kosongkan jika tidak ada wali kelas
+                        }
+                    }
+                });
+            } else {
+                // Jika tidak ada kelas yang dipilih, kosongkan input wali kelas
+                $('#wali_kelas').val('');
+            }
+        });
+    </script>
 
 
 </body>

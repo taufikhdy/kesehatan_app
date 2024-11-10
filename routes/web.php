@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Route;
 
 //RUTE UKS
 
-use App\Http\Controllers\uksController;
+use App\Http\Controllers\UKSController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -41,8 +42,10 @@ Route::middleware(['auth'])->group(function(){
 
 });
 
-Route::get('ukssiswa', [uksController::class, 'ukssiswa'])->name('ukssiswa');
-Route::get('ukssiswi', [uksController::class, 'ukssiswi'])->name('ukssiswi');
+Route::get('ukssiswa', [UKSController::class, 'index'])->name('ukssiswa');
+Route::get('tmbhsiswa', [UKSController::class, 'tambah'])->name('tmbhsiswa');
+Route::get('/get-teacher/{nama_kelas}', [UKSController::class, 'getWaliKelas']);
 
-Route::get('pasiensiswa',[uksController::class,'tmbhsiswa'])->name('tmbhsiswa');
-Route::get('pasiensiswi',[uksController::class,'tmbhsiswi'])->name('tmbhsiswi');
+Route::post('tambah', [UKSController::class, 'kirim'])->name('tambah');
+Route::post('hapus/{id}', [UKSController::class, 'hapus'])->name('hapus');
+
