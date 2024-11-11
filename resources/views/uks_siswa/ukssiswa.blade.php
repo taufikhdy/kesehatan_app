@@ -11,17 +11,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Data Kesehatan</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="{{ asset('template-admin/vendors/ti-icons/css/themify-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('template-admin/vendors/base/vendor.bundle.base.css') }}">
-    <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
-    <!-- endinject -->
-    <!-- plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="{{ asset('landing/vendor/bootstrap/css/bootstrap.min.css') }}">
-    <!-- endinject -->
-    <link rel="shortcut icon" href="{{ asset('image/logo.png') }}" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="{{ asset('poskestren/assets/vendor/css/core.css') }}" />
+    <link rel="stylesheet" href="{{ asset('poskestren/assets/vendor/css/theme-default.css') }}" />
+    <link rel="stylesheet" href="{{ asset('poskestren/assets/css/demo.css') }}" />
+
+    {{-- bootstrap --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
 
@@ -34,7 +37,7 @@
     <div class="container card card-rounded p-3 mt-5 mb-5" style="overflow: auto">
         <div class="card-body">
             <div class="d-flex justify-content-between align-items-center bg-primary p-3 text-white rounded-top">
-                <h2>Data siswa</h2>
+                <h2 class="text-white">Data Siswa</h2>
                 <div class="d-flex justify-center align-items-center">
                     <h3 class="p-1">
                         <a href="{{ route('tmbhsiswa') }}" class="btn btn-sm btn-success rounded"><i

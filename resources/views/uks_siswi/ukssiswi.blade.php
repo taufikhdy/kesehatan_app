@@ -11,17 +11,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Data Kesehatan</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="{{ asset('template-admin/vendors/ti-icons/css/themify-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('template-admin/vendors/base/vendor.bundle.base.css') }}">
-    <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
-    <!-- endinject -->
-    <!-- plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="{{ asset('template-admin/css/style.css') }}">
-    <!-- endinject -->
-    <link rel="shortcut icon" href="{{ asset('image/logo.png') }}" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="{{ asset('poskestren/assets/vendor/css/core.css')}}" />
+    <link rel="stylesheet" href="{{ asset('poskestren/assets/vendor/css/theme-default.css')}}" />
+    <link rel="stylesheet" href="{{ asset('poskestren/assets/css/demo.css')}}" />
+
+    {{-- bootstrap --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
 
@@ -32,11 +35,11 @@
             <div class="d-flex justify-content-between align-items-center bg-primary p-3 text-white rounded-top">
                 <h2>Data Siswi</h2>
                 <div class="d-flex justify-center align-items-center">
-                    <h3>
+                    <h3 class="p-1">
                         <a href="{{ route('tmbhsiswi') }}" class="btn btn-sm btn-success rounded"><i
                                 class="fa-solid fa-plus"></i> tambah pasien</a>
                     </h3>
-                    <h3>
+                    <h3 class="p-1">
                         <a href="/logout" class="btn btn-sm btn-danger rounded"><i
                                 class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
                     </h3>
@@ -53,9 +56,28 @@
                             <th>Keluhan/Gejala</th>
                             <th>Status Pengobatan</th>
                             <th>Tanggal Sakit</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody class="text-center">
+
+                        @foreach ($sakit as $no => $sakit)
+                            <tr>
+                                <td>{{ $no + 1 }}</td>
+                                <td>{{ $sakit->nama }}</td>
+                                <td>{{ $sakit->kelas }}</td>
+                                <td>{{ $sakit->wali_kelas }}</td>
+                                <td>{{ $sakit->keluhan }}</td>
+                                <td>{{ $sakit->status }}</td>
+                                <td>{{ $sakit->tanggal }}</td>
+                                <td>
+                                    <form action="{{ route('hapus', $sakit->id) }}" method="POST">
+                                        @csrf
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
 
                     </tbody>
                 </table>

@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Sakit;
+use App\Models\Siswa;
+use App\Models\Siswi;
 
 class AdminController extends Controller
 {
@@ -15,12 +16,13 @@ class AdminController extends Controller
     }
     function uks_siswa()
     {
-        $sakit = Sakit::all();
+        $sakit = Siswa::all();
         return view('uks_siswa.ukssiswa', compact('sakit'));
 
     } function uks_siswi()
     {
-        return view('uks_siswi.ukssiswi');
+        $sakit = Siswi::all();
+        return view('uks_siswi.ukssiswi', compact('sakit'));
     }
     function poskes()
     {

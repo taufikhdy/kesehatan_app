@@ -3,21 +3,33 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Sakit;
+use App\Models\Siswa;
 use App\Models\Kelas;
+
+use Illuminate\Support\Facades\Auth;
 
 
 class SiswaController extends Controller
 {
 
     public function index(){
-        $sakit = Sakit::all();
+        $sakit = Siswa::all();
         return view('uks_siswa.ukssiswa', compact('sakit'));
     }
 
     public function tambah(){
-        $data = Kelas::all();
-        return view('uks_siswa.formsiswa', compact('data'));
+        $user = Auth::user();
+        $email = $user->email;
+
+        if($email == 'ukssiswa@gmail.com'){
+            $ket = 'kelas_siswa';
+            $data = Kelas::where('keterangan', $ket)->get();
+            return view('uks_siswa.formsiswa', compact('data'));
+        }elseif($email == 'ukssiswi@gmail.com'){
+            $ket = 'kelas_siswi';
+            $data = Kelas::where('keterangan', $ket)->get();
+            return view('uks_siswa.formsiswa', compact('data'));
+        }
     }
 
     public function getWaliKelas($nama_kelas){
@@ -40,7 +52,7 @@ class SiswaController extends Controller
             // 'description' => 'nullable|string',
         ]);
 
-        Sakit::create($request->all());
+        Siswa::create($request->all());
 
         return redirect()->route('ukssiswa')->with('success', 'Patient added successfully.');
 
@@ -51,7 +63,7 @@ class SiswaController extends Controller
 
     public function hapus($id)
     {
-        $siswa = Sakit::findOrFail($id);
+        $siswa = Siswa::findOrFail($id);
         $siswa->delete();
 
         return redirect()->route('ukssiswa')->with('success', 'Patient deleted successfully.');

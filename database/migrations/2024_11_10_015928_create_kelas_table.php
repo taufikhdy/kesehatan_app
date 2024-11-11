@@ -16,6 +16,7 @@ return new class extends Migration
 
             $table->string('kelas');
             $table->string('wali_kelas');
+            $table->string('keterangan');
 
             $table->timestamps();
         });

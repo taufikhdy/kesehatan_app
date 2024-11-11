@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Route;
 //RUTE UKS
 
 use App\Http\Controllers\SiswaController;
-
+use App\Http\Controllers\Siswi\Controller;
+use App\Http\Controllers\SiswiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +50,14 @@ Route::get('ukssiswa', [SiswaController::class, 'index'])->name('ukssiswa');
 Route::get('tmbhsiswa', [SiswaController::class, 'tambah'])->name('tmbhsiswa');
 Route::get('/get-teacher/{nama_kelas}', [SiswaController::class, 'getWaliKelas']);
 
-Route::post('tambah', [SiswaController::class, 'kirim'])->name('tambah');
+Route::post('kirimsiswa', [SiswaController::class, 'kirim'])->name('kirimsiswa');
 Route::post('hapus/{id}', [SiswaController::class, 'hapus'])->name('hapus');
 
+
+// UKS SISWI
+Route::get('ukssiswi', [SiswiController::class, 'index'])->name('ukssiswi');
+Route::get('tmbhsiswi', [SiswiController::class, 'tambah'])->name('tmbhsiswi');
+Route::get('/get-teacher/{nama_kelas}', [SiswiController::class, 'getWaliKelas']);
+
+Route::post('kirimsiswi', [SiswiController::class, 'kirim'])->name('kirimsiswi');
+Route::post('hapus/{id}', [SiswiController::class, 'hapus'])->name('hapus');
