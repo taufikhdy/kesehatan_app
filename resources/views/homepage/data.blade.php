@@ -94,7 +94,7 @@
                                                         <tbody class="text-center">
                                                             @foreach ($sakit as $no => $sakit)
                                                                 <tr>
-                                                                    <td>{{$no->}}</td>
+                                                                    <td>{{$no + 1}}</td>
                                                                     <td>{{$sakit->nama}}</td>
                                                                     <td>{{$sakit->kelas}}</td>
                                                                     <td>{{$sakit->wali_kelas}}</td>
@@ -206,7 +206,7 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody class="text-center">
-                                                            @foreach ($sakit as $no => $sakit)
+                                                            @foreach ($siswisakit as $no => $sakit)
                                                                 <tr>
                                                                     <td>{{ $no + 1 }}</td>
                                                                     <td>{{ $sakit->nama }}</td>
