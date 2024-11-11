@@ -7,7 +7,7 @@ use App\Models\Sakit;
 use App\Models\Kelas;
 
 
-class UKSController extends Controller
+class SiswaController extends Controller
 {
 
     public function index(){

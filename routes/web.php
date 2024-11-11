@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 //RUTE UKS
 
-use App\Http\Controllers\UKSController;
+use App\Http\Controllers\SiswaController;
 
 
 /*
@@ -25,7 +25,7 @@ Route::middleware(['guest'])->group(function(){
 
     Route::get('/',[SesiController::class, 'index'])->name('login');
     Route::get('/login',[SesiController::class, 'index2'])->name('login2');
-Route::post('/login',[SesiController::class, 'login'])->name('real.login');
+    Route::post('/login',[SesiController::class, 'login'])->name('real.login');
 
 });
 Route::get('/home',function(){
@@ -43,10 +43,12 @@ Route::middleware(['auth'])->group(function(){
 });
 Route::get('home',[SesiController::class, 'landing'])->name('landing');
 
-Route::get('ukssiswa', [UKSController::class, 'index'])->name('ukssiswa');
-Route::get('tmbhsiswa', [UKSController::class, 'tambah'])->name('tmbhsiswa');
-Route::get('/get-teacher/{nama_kelas}', [UKSController::class, 'getWaliKelas']);
 
-Route::post('tambah', [UKSController::class, 'kirim'])->name('tambah');
-Route::post('hapus/{id}', [UKSController::class, 'hapus'])->name('hapus');
+//UKS SISWA
+Route::get('ukssiswa', [SiswaController::class, 'index'])->name('ukssiswa');
+Route::get('tmbhsiswa', [SiswaController::class, 'tambah'])->name('tmbhsiswa');
+Route::get('/get-teacher/{nama_kelas}', [SiswaController::class, 'getWaliKelas']);
+
+Route::post('tambah', [SiswaController::class, 'kirim'])->name('tambah');
+Route::post('hapus/{id}', [SiswaController::class, 'hapus'])->name('hapus');
 

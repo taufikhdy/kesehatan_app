@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="table-responsive">
-                <table class="table table-hover">
+                <table class="table table-hover text-nowrap">
                     <thead class="text-center table-primary">
                         <tr>
                             <th>No</th>
