@@ -36,6 +36,7 @@ class csvImportSeeder extends Seeder
             Kelas::create([
                 'kelas' => $row[0],
                 'wali_kelas' => $row[1],
+                'keterangan' => $row[2]
             ]);
         }
 
