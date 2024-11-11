@@ -24,7 +24,7 @@
                                 <a class="nav-link {{ Request::routeIs('fulldata') ? 'active' : '' }}" href="{{ route('fulldata') }}">Data</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Data Rekam Medis</a>
+                                <a class="nav-link {{ Request::routeIs('fullrekammedis') ? 'active' : '' }}" href="{{ route('fullrekammedis') }}">Data Rekam Medis</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Tentang</a>

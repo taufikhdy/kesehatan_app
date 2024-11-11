@@ -7,11 +7,11 @@
           <div class="row">
             <div class="col-lg-6 align-self-center">
               <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                <div class="row">
-                  <div class="col-lg-12 text-white">
+                <div class="row service">
+                  <div class="col-lg-12">
                     <h3>"Kesehatan Adalah Mahkota, yang
                         Tidak diketahui kecuali oleh Orang yang Sakit"</h3>
-                    <p class="text-white">kesehatan adalah hal yang sangat berharga, namun sering kali tidak disadari nilainya hingga seseorang jatuh sakit. Ini mengingatkan kita untuk menghargai dan menjaga kesehatan selagi masih memilikinya.</p>
+                    <p>kesehatan adalah hal yang sangat berharga, namun sering kali tidak disadari nilainya hingga seseorang jatuh sakit. Ini mengingatkan kita untuk menghargai dan menjaga kesehatan selagi masih memilikinya.</p>
                   </div>
                   {{-- <div class="col-lg-12">
                     <div class="white-button first-button scroll-to-section">
