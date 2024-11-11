@@ -33,20 +33,18 @@
     <div class="container card card-rounded p-3 mt-5 mb-5" style="overflow: auto">
         <div class="card-body">
             <div class="d-flex justify-content-between align-items-center bg-primary p-3 text-white rounded-top">
-                <h2>Data Siswi</h2>
+                <h2 class="text-white">Data Siswi</h2>
                 <div class="d-flex justify-center align-items-center">
                     <h3 class="p-1">
-                        <a href="{{ route('tmbhsiswi') }}" class="btn btn-sm btn-success rounded"><i
-                                class="fa-solid fa-plus"></i> tambah pasien</a>
+                        <a href="{{ route('tmbhsiswi') }}" class="btn btn-success rounded"><i class="bi bi-person-fill-add"></i>tambah pasien</a>
                     </h3>
                     <h3 class="p-1">
-                        <a href="/logout" class="btn btn-sm btn-danger rounded"><i
-                                class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                        <a href="/logout" class="btn btn-danger rounded"><i class="bi bi-box-arrow-left"></i> Logout</a>
                     </h3>
                 </div>
             </div>
             <div class="table-responsive">
-                <table class="table table-hover">
+                <table class="table table-hover text-nowrap">
                     <thead class="text-center table-primary">
                         <tr>
                             <th>No</th>
@@ -73,7 +71,7 @@
                                 <td>
                                     <form action="{{ route('hapus', $sakit->id) }}" method="POST">
                                         @csrf
-                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                        <button type="submit" class="btn btn-danger"><i class="bi bi-person-dash-fill"></i> Delete</button>
                                     </form>
                                 </td>
                             </tr>

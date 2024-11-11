@@ -33,8 +33,8 @@
     <div class="container my-5">
         <div class="card border-bottom-0 rounded">
             <div class="d-flex justify-content-between align-items-center bg-primary p-3 text-white rounded-top">
-                <h2>Tambah Pasien</h2>
-                <h3><a href="{{ route('ukssiswa') }}" class="btn btn-sm btn-danger rounded">Back</a></h3>
+                <h2 class="text-white">Tambah Pasien</h2>
+                <h3><a href="{{ route('ukssiswa') }}" class="btn btn-danger rounded"><i class="bi bi-x-square"></i> Back</a></h3>
             </div>
             <div class="card-body">
                 <p class="card-title">Tambahkan Data Pasien</p>
