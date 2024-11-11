@@ -49,7 +49,7 @@ class SesiController extends Controller
             return redirect('admin/poskes');
          }
          }else{
-            return redirect('')->withErrors('username dan password yang dimasukan tidak sesuai')->withInput();
+            return redirect('/login')->withErrors('username dan password yang dimasukan tidak sesuai')->withInput();
          }
 
     }

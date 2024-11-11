@@ -5,13 +5,13 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="row">
-            <div class="col-lg-6 align-self-center">
+            <div class="col-lg-5 align-self-center">
               <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                 <div class="row">
-                  <div class="col-lg-12">
+                  <div class="col-lg-12 text-white">
                     <h3>"Kesehatan Adalah Mahkota, yang
                         Tidak diketahui kecuali oleh Orang yang Sakit"</h3>
-                    <p>kesehatan adalah hal yang sangat berharga, namun sering kali tidak disadari nilainya hingga seseorang jatuh sakit. Ini mengingatkan kita untuk menghargai dan menjaga kesehatan selagi masih memilikinya.</p>
+                    <p class="text-white">kesehatan adalah hal yang sangat berharga, namun sering kali tidak disadari nilainya hingga seseorang jatuh sakit. Ini mengingatkan kita untuk menghargai dan menjaga kesehatan selagi masih memilikinya.</p>
                   </div>
                   {{-- <div class="col-lg-12">
                     <div class="white-button first-button scroll-to-section">
@@ -24,7 +24,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-4">
               <div class="right-image wow fadeInRight" data-wow-duration="3s" data-wow-delay="0.5s">
                 <img src="{{ asset('image/logo.png') }}" alt="">
               </div>
@@ -80,33 +80,33 @@
   <div id="about" class="about-us section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 align-self-center">
+        <div class="col-lg-12 align-self-center">
           <div class="section-heading">
             <h4>Manfaat <em>Menjaga Kesehatan</em> Badan</h4>
             <img src="{{ asset('landing/assets/images/heading-line-dec.png') }}" alt="">
             <p>Menjaga kesehatan bukan hanya soal mencegah penyakit, tetapi juga tentang meningkatkan kualitas hidup. Berikut beberapa manfaat utama dari menjaga kesehatan secara menyeluruh:</p>
           </div>
           <div class="row">
-            <div class="col-lg-6">
-              <div class="box-item">
-                <h4><a href="#">Menjaga Kesehatan Mental</a></h4>
+            <div class="col-lg-12">
+              <div class="service-item box-item">
+                <h4>Menjaga Kesehatan Mental</h4>
                 <p>Olahraga dan pola makan seimbang dapat membantu mengurangi stres, kecemasan, dan meningkatkan suasana hati.</p>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="box-item">
+            <div class="col-lg-12">
+              <div class="service-item box-item">
                 <h4>Pencegah Penyakit</h4>
                 <p>Dengan menjaga pola hidup sehat, Anda dapat menurunkan risiko penyakit seperti diabetes, hipertensi, dan penyakit jantung.</p>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="box-item">
+            <div class="col-lg-12">
+              <div class="service-item box-item">
                 <h4>Meningkatkan Kualitas Tidur</h4>
                 <p>Kesehatan yang baik juga berpengaruh pada kualitas tidur. Dengan tidur yang cukup dan nyenyak, tubuh dan pikiran Anda akan lebih segar, sehingga siap menghadapi tantangan setiap hari.</p>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="box-item">
+            <div class="col-lg-12">
+              <div class="service-item box-item">
                 <h4>Menjaga Kualitas Hidup</h4>
                 <p>Kesehatan yang baik memungkinkan Anda menikmati hidup lebih lama dan berkualitas, sehingga Anda bisa menghabiskan waktu bersama keluarga dan orang-orang yang Anda cintai tanpa terbatas oleh masalah kesehatan.</p>
               </div>
@@ -141,7 +141,7 @@
               <div class="row">
                 <div class="col-lg-7 align-self-center">
                   <div class="menu">
-                    <div class="first-thumb active">
+                    <div class="first-thumb">
                       <div class="thumb">
                         <div class="row">
                           <div class="col-lg-6 col-sm-4 col-12">
@@ -154,7 +154,7 @@
                         </div>
                       </div>
                     </div>
-                    <div >
+                    <div>
                         <div class="thumb">
                           <div class="row">
                             <div class="col-lg-6 col-sm-4 col-12">
@@ -180,7 +180,7 @@
                           </div>
                         </div>
                       </div>
-                      <div >
+                      <div class="mb-5">
                         <div class="thumb">
                           <div class="row">
                             <div class="col-lg-6 col-sm-4 col-12">

@@ -17,6 +17,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('landing/vendor/bootstrap/css/bootstrap.min.css?v2+') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ asset('image/logo.png') }}" type="image/x-icon">
 
 <!--
 
@@ -31,11 +32,24 @@ https://templatemo.com/tm-570-chain-app-dev
     <link rel="stylesheet" href="{{ asset('landing/assets/css/templatemo-chain-app-dev.css') }}">
     <link rel="stylesheet" href="{{ asset('landing/assets/css/animated.css') }}">
     <link rel="stylesheet" href="{{ asset('landing/assets/css/owl.css') }}">
+    <style>
+        .header-area .img-logo {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start; /* Ini akan memastikan logo berada di kiri */
+                }
+
+                .header-area nav.main-nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between; /* Ini untuk menjaga logo di kiri dan menu di kanan */
+                }
+    </style>
 
   </head>
 
 <body>
-    
+
 @include('homepage.bagian.navbar')
 @yield('content')
 @include('homepage.bagian.footer')
