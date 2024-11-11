@@ -20,7 +20,7 @@
                             <a href="{{ route('fulldata') }}" class="{{ Request::routeIs('fulldata') ? 'active' : '' }}">Data</a>
                         </li>
                         <li class="scroll-to-section">
-                            <a href="#" class="{{ Request::routeIs('') ? 'active' : '' }}">Data Rekam Medis</a>
+                            <a href="{{ route('fullrekammedis') }}" class="{{ Request::routeIs('fullrekammedis') ? 'active' : '' }}">Data Rekam Medis</a>
                         </li>
                         <li class="scroll-to-section">
                             <a href="#" class="{{ Request::routeIs('') ? 'active' : '' }}">Tentang</a>
