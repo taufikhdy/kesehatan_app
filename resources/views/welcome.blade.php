@@ -22,7 +22,7 @@
 
         img {
             max-width: 100%;
-            height: auto;
+            height: 100vh;
         }
     </style>
 </head>
