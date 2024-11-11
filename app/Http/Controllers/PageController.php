@@ -12,4 +12,8 @@ class PageController extends Controller
         $siswisakit = Siswi::all();
         return view('homepage.data', compact('sakit', 'siswisakit'));
     }
+
+    public function fullrekammedis(){
+        return view('homepage.rekammedis');
+    }
 }

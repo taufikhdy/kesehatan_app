@@ -45,6 +45,7 @@ Route::middleware(['auth'])->group(function(){
 });
 Route::get('homelanding',[SesiController::class, 'landing'])->name('landing');
 Route::get('dataPasien', [PageController::class, 'fulldata'])->name('fulldata');
+Route::get('dataRekamMedis', [PageController::class, 'fullrekammedis'])->name('fullrekammedis');
 
 
 
