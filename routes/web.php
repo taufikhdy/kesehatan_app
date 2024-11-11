@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SesiController;
+use App\Http\Controllers\pageController;
 use Illuminate\Support\Facades\Route;
 
 //RUTE UKS
@@ -43,6 +44,8 @@ Route::middleware(['auth'])->group(function(){
 
 });
 Route::get('homelanding',[SesiController::class, 'landing'])->name('landing');
+Route::get('dataPasien', [PageController::class, 'fulldata'])->name('fulldata');
+
 
 
 //UKS SISWA
