@@ -19,6 +19,10 @@
     <link href="{{ asset('landing/vendor/bootstrap/css/bootstrap.min.css?v2+') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ asset('image/logo.png') }}" type="image/x-icon">
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
 <!--
 
 TemplateMo 570 Chain App Dev
@@ -62,5 +66,6 @@ https://templatemo.com/tm-570-chain-app-dev
   <script src="{{ asset('landing/assets/js/imagesloaded.js') }}"></script>
   <script src="{{ asset('landing/assets/js/popup.js') }}"></script>
   <script src="{{ asset('landing/assets/js/custom.js') }}"></script>
+
 </body>
 </html>
