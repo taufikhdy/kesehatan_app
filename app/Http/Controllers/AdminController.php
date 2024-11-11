@@ -10,7 +10,7 @@ class AdminController extends Controller
 {
     function index()
     {
-        return view('welcome');
+        return view('admin');
 
     }
     function uks_siswa()

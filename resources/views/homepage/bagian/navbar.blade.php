@@ -11,10 +11,10 @@
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li class="scroll-to-section"><a href="{{ route('landing') }}" class="active">Home</a></li>
-              <li class="scroll-to-section"><a href="#services">Services</a></li>
-              <li class="scroll-to-section"><a href="#about">About</a></li>
-              <li class="scroll-to-section"><a href="#pricing">Pricing</a></li>
-              <li class="scroll-to-section"><a href="#newsletter">Newsletter</a></li>
+              <li class="scroll-to-section"><a href="">Services</a></li>
+              <li class="scroll-to-section"><a href="">About</a></li>
+              <li class="scroll-to-section"><a href="">Pricing</a></li>
+              <li class="scroll-to-section"><a href="">Newsletter</a></li>
               <li><a href="{{ route('login2') }}" class="btn btn-outline-primary text-white"><i class="fa fa-sign-in-alt"></i> Sign In Now</a></li>
             </ul>
             <a class='menu-trigger'>
