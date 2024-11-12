@@ -3411,13 +3411,13 @@ fieldset:disabled .btn {
 }
 
 .btn-warning {
-    color: #000;
+    color: #fff;
     background-color: #ffc107;
     border-color: #ffc107
 }
 
 .btn-warning:hover {
-    color: #000;
+    color: #fff;
     background-color: #ffca2c;
     border-color: #ffc720
 }

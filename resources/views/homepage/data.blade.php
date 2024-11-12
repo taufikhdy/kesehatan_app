@@ -101,9 +101,9 @@
                                                                     <td>{{$sakit->keluhan}}</td>
                                                                     <td>{{$sakit->status}}</td>
                                                                     <td>{{$sakit->tanggal}}</td>
-                                                                    {{-- di gunakan di table sudah berobat --}}
+                                                                    {{-- untuk di table sudah berobat dan di rekam medis --}}
                                                                     {{-- <td>
-                                                                        <a href="{{ route('show.siswa', $sakit->id) }}" class="btn btn-sm btn-primary">Lihat</a>
+                                                                        <a href="{{ route('show.siswa', $sakit->id) }}" style="padding: 14px; border-radius:8px;" class="btn-sm btn-warning">Lihat</a>
                                                                     </td> --}}
                                                                 </tr>
                                                             @endforeach
@@ -219,9 +219,9 @@
                                                                     <td>{{ $sakit->keluhan }}</td>
                                                                     <td>{{ $sakit->status }}</td>
                                                                     <td>{{ $sakit->tanggal }}</td>
-                                                                {{-- di gunakan di table sudah berobat --}}
+                                                                    {{-- untuk di table sudah berobat dan di rekam medis --}}
                                                                     {{-- <td>
-                                                                        <a href="{{ route('show.siswi', $sakit->id) }}" class="btn btn-sm btn-primary">Lihat</a>
+                                                                        <a href="{{ route('show.siswi', $sakit->id) }}" style="padding: 14px; border-radius:8px;" class="btn-sm btn-warning">Lihat</a>
                                                                     </td> --}}
                                                                 </tr>
                                                             @endforeach
