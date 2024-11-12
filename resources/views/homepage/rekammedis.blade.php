@@ -52,7 +52,7 @@
                                         <div class="card-body">
                                             <p class="card-title mb-0">Data Rekam Medis Pasien Siswa</p>
                                             <div class="table-responsive">
-                                                <table class="table table-hover">
+                                                <table class="table table-hover text-nowrap">
                                                     <thead class="text-center bg-primary text-white">
                                                         <tr>
                                                             <th>No</th>
@@ -100,7 +100,7 @@
                                         <div class="card-body">
                                             <p class="card-title mb-0">Data Rekam Medis Pasien Siswi</p>
                                             <div class="table-responsive">
-                                                <table class="table table-hover">
+                                                <table class="table table-hover text-nowrap">
                                                     <thead class="text-center bg-primary text-white">
                                                         <tr>
                                                             <th>No</th>

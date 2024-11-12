@@ -79,7 +79,7 @@
                                             <div class="card-body">
                                                 <p class="card-title mb-0">Data Pasien Siswa</p>
                                                 <div class="table-responsive">
-                                                    <table class="table table-hover">
+                                                    <table class="table table-hover text-nowrap">
                                                         <thead class="text-center table-primary">
                                                             <tr>
                                                                 <th>No</th>
@@ -101,6 +101,10 @@
                                                                     <td>{{$sakit->keluhan}}</td>
                                                                     <td>{{$sakit->status}}</td>
                                                                     <td>{{$sakit->tanggal}}</td>
+                                                                    {{-- di gunakan di table sudah berobat --}}
+                                                                    {{-- <td>
+                                                                        <a href="{{ route('show.siswa', $sakit->id) }}" class="btn btn-sm btn-primary">Lihat</a>
+                                                                    </td> --}}
                                                                 </tr>
                                                             @endforeach
                                                         </tbody>
@@ -123,7 +127,7 @@
                                             <div class="card-body">
                                                 <p class="card-title mb-0">Data Pasien Siswa</p>
                                                 <div class="table-responsive">
-                                                    <table class="table table-hover">
+                                                    <table class="table table-hover text-nowrap">
                                                         <thead class="text-center table-primary">
                                                             <tr>
                                                                 <th>No</th>
@@ -193,7 +197,7 @@
                                             <div class="card-body">
                                                 <p class="card-title mb-0">Data Pasien Siswi</p>
                                                 <div class="table-responsive">
-                                                    <table class="table table-hover">
+                                                    <table class="table table-hover text-nowrap">
                                                         <thead class="text-center table-primary">
                                                             <tr>
                                                                 <th>No</th>
@@ -215,6 +219,10 @@
                                                                     <td>{{ $sakit->keluhan }}</td>
                                                                     <td>{{ $sakit->status }}</td>
                                                                     <td>{{ $sakit->tanggal }}</td>
+                                                                {{-- di gunakan di table sudah berobat --}}
+                                                                    {{-- <td>
+                                                                        <a href="{{ route('show.siswi', $sakit->id) }}" class="btn btn-sm btn-primary">Lihat</a>
+                                                                    </td> --}}
                                                                 </tr>
                                                             @endforeach
                                                         </tbody>
@@ -237,7 +245,7 @@
                                             <div class="card-body">
                                                 <p class="card-title mb-0">Data Pasien Siswi</p>
                                                 <div class="table-responsive">
-                                                    <table class="table table-hover">
+                                                    <table class="table table-hover text-nowrap">
                                                         <thead class="text-center table-primary">
                                                             <tr>
                                                                 <th>No</th>
