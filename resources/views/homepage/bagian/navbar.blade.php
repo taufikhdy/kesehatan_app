@@ -6,7 +6,7 @@
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <!-- Logo -->
                     <a class="navbar-brand" href="{{ route('landing') }}">
-                        <img height="70" src="{{ asset('image/logopanjang.png') }}" alt="SMK Al-Ittihad" class="d-inline-block align-top">
+                        <img height="50" src="{{ asset('image/logopanjang.png') }}" alt="SMK Al-Ittihad" class="d-inline-block align-top">
                     </a>
 
                     <!-- Toggle Button untuk Mobile -->

@@ -26,6 +26,6 @@ class AdminController extends Controller
     }
     function poskes()
     {
-        return view('poskes');
+        return view('poskes.home');
     }
 }
