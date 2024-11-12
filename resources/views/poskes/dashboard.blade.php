@@ -5,23 +5,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Focus - Bootstrap Admin Dashboard </title>
+    <title>Pos Kesehatan Pesantren Al-Ittihad</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
-    <link rel="stylesheet" href="{{ asset('admin/vendor/owl-carousel/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('admin/vendor/owl-carousel/css/owl.theme.default.min.css')}}">
-    <link href="{{ asset('admin/vendor/jqvmap/css/jqvmap.min.css')}}" rel="stylesheet">
-    <link href="{{ asset('admin/css/style.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('poskestren/vendor/owl-carousel/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('poskestren/vendor/owl-carousel/css/owl.theme.default.min.css')}}">
+    <link href="{{ asset('poskestren/vendor/jqvmap/css/jqvmap.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('poskestren/css/style.css')}}" rel="stylesheet">
 
 
 
 </head>
 
 <body>
-
-    <!--*******************
-        Preloader start
-    ********************-->
     <div id="preloader">
         <div class="sk-three-bounce">
             <div class="sk-child sk-bounce1"></div>
@@ -29,19 +25,11 @@
             <div class="sk-child sk-bounce3"></div>
         </div>
     </div>
-    <!--*******************
-        Preloader end
-    ********************-->
 
 
-    <!--**********************************
-        Main wrapper start
-    ***********************************-->
     <div id="main-wrapper">
 
-        <!--**********************************
-            Nav header start
-        ***********************************-->
+
         <div class="nav-header">
             <a href="index.html" class="brand-logo">
                 <img class="logo-abbr" src="./images/logo.png" alt="">
@@ -55,13 +43,11 @@
                 </div>
             </div>
         </div>
-        <!--**********************************
-            Nav header end
-        ***********************************-->
 
-        <!--**********************************
-            Header start
-        ***********************************-->
+
+
+
+
         <div class="header">
             <div class="header-content">
                 <nav class="navbar navbar-expand">
@@ -164,13 +150,11 @@
                 </nav>
             </div>
         </div>
-        <!--**********************************
-            Header end ti-comment-alt
-        ***********************************-->
 
-        <!--**********************************
-            Sidebar start
-        ***********************************-->
+
+
+
+{{-- sidebar --}}
         <div class="quixnav">
             <div class="quixnav-scroll">
                 <ul class="metismenu" id="menu">
@@ -289,13 +273,11 @@
 
 
         </div>
-        <!--**********************************
-            Sidebar end
-        ***********************************-->
 
-        <!--**********************************
-            Content body start
-        ***********************************-->
+
+
+
+
         <div class="content-body">
             <!-- row -->
             <div class="container-fluid">
@@ -356,7 +338,7 @@
                     <!-- /# column -->
                 </div>
                 <div class="row">
-                    <div class="col-xl-8 col-lg-8 col-md-8">
+                    <div class="col-xl-12 col-lg-12 col-md-12">
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title">Sales Overview</h4>
@@ -367,25 +349,6 @@
                                         <div id="morris-bar-chart"></div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <div class="m-t-10">
-                                    <h4 class="card-title">Customer Feedback</h4>
-                                    <h2 class="mt-3">385749</h2>
-                                </div>
-                                <div class="widget-card-circle mt-5 mb-5" id="info-circle-card">
-                                    <i class="ti-control-shuffle pa"></i>
-                                </div>
-                                <ul class="widget-line-list m-b-15">
-                                    <li class="border-right">92% <br><span class="text-success"><i
-                                                class="ti-hand-point-up"></i> Positive</span></li>
-                                    <li>8% <br><span class="text-danger"><i
-                                                class="ti-hand-point-down"></i>Negative</span></li>
-                                </ul>
                             </div>
                         </div>
                     </div>
@@ -527,29 +490,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Web Server</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="cpu-load-chart">
-                                    <div id="cpu-load" class="cpu-load"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /# card -->
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Country</h4>
-                            </div>
-                            <div class="card-body">
-                                <div id="vmap13" class="vmap"></div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-lg-6">
                         <div class="card">
                             <div class="card-header">
@@ -644,80 +584,6 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-xl-4 col-xxl-6 col-md-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Timeline</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="widget-timeline">
-                                    <ul class="timeline">
-                                        <li>
-                                            <div class="timeline-badge primary"></div>
-                                            <a class="timeline-panel text-muted" href="#">
-                                                <span>10 minutes ago</span>
-                                                <h6 class="m-t-5">Youtube, a video-sharing website, goes live.</h6>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <div class="timeline-badge warning">
-                                            </div>
-                                            <a class="timeline-panel text-muted" href="#">
-                                                <span>20 minutes ago</span>
-                                                <h6 class="m-t-5">Mashable, a news website and blog, goes live.</h6>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <div class="timeline-badge danger">
-                                            </div>
-                                            <a class="timeline-panel text-muted" href="#">
-                                                <span>30 minutes ago</span>
-                                                <h6 class="m-t-5">Google acquires Youtube.</h6>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <div class="timeline-badge success">
-                                            </div>
-                                            <a class="timeline-panel text-muted" href="#">
-                                                <span>15 minutes ago</span>
-                                                <h6 class="m-t-5">StumbleUpon is acquired by eBay. </h6>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <div class="timeline-badge warning">
-                                            </div>
-                                            <a class="timeline-panel text-muted" href="#">
-                                                <span>20 minutes ago</span>
-                                                <h6 class="m-t-5">Mashable, a news website and blog, goes live.</h6>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <div class="timeline-badge dark">
-                                            </div>
-                                            <a class="timeline-panel text-muted" href="#">
-                                                <span>20 minutes ago</span>
-                                                <h6 class="m-t-5">Mashable, a news website and blog, goes live.</h6>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <div class="timeline-badge info">
-                                            </div>
-                                            <a class="timeline-panel text-muted" href="#">
-                                                <span>30 minutes ago</span>
-                                                <h6 class="m-t-5">Google acquires Youtube.</h6>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-xl-4 col-xxl-6 col-lg-6 col-md-6 col-sm-12">
                         <div class="card">
                             <div class="card-header">
@@ -746,30 +612,6 @@
                                             <input type="text" class="tdl-new form-control" placeholder="Write new item and hit 'Enter'...">
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-xxl-6 col-xl-4 col-lg-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Product Sold</h4>
-                                <div class="card-action">
-                                    <div class="dropdown custom-dropdown">
-                                        <div data-toggle="dropdown">
-                                            <i class="ti-more-alt"></i>
-                                        </div>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <a class="dropdown-item" href="#">Option 1</a>
-                                            <a class="dropdown-item" href="#">Option 2</a>
-                                            <a class="dropdown-item" href="#">Option 3</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="chart py-4">
-                                    <canvas id="sold-product"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -866,71 +708,58 @@
 
             </div>
         </div>
-        <!--**********************************
-            Content body end
-        ***********************************-->
 
 
-        <!--**********************************
-            Footer start
-        ***********************************-->
+
+
+
         <div class="footer">
             <div class="copyright">
                 <p>Copyright © Designed &amp; Developed by <a href="#" target="_blank">Quixkit</a> 2019</p>
                 <p>Distributed by <a href="https://themewagon.com/" target="_blank">Themewagon</a></p>
             </div>
         </div>
-        <!--**********************************
-            Footer end
-        ***********************************-->
 
-        <!--**********************************
-           Support ticket button start
-        ***********************************-->
 
-        <!--**********************************
-           Support ticket button end
-        ***********************************-->
+
 
 
     </div>
-    <!--**********************************
-        Main wrapper end
-    ***********************************-->
 
-    <!--**********************************
-        Scripts
-    ***********************************-->
+
+
+
+
     <!-- Required vendors -->
-    <script src="./vendor/global/global.min.js"></script>
-    <script src="./js/quixnav-init.js"></script>
-    <script src="./js/custom.min.js"></script>
+    <script src="{{ asset('poskestren/vendor/global/global.min.js')}}"></script>
+    <script src="{{ asset('poskestren/js/quixnav-init.js')}}"></script>
+    <script src="{{ asset('poskestren/js/custom.min.js')}}"></script>
 
 
     <!-- Vectormap -->
-    <script src="./vendor/raphael/raphael.min.js"></script>
-    <script src="./vendor/morris/morris.min.js"></script>
+    <script src="{{ asset('poskestren/vendor/raphael/raphael.min.js')}}"></script>
+    <script src="{{ asset('poskestren/vendor/morris/morris.min.js')}}"></script>
 
 
-    <script src="./vendor/circle-progress/circle-progress.min.js"></script>
-    <script src="./vendor/chart.js/Chart.bundle.min.js"></script>
+    <script src="{{ asset('poskestren/vendor/circle-progress/circle-progress.min.js')}}"></script>
+    <script src="{{ asset('poskestren/vendor/chart.js/Chart.bundle.min.js')}}"></script>
 
-    <script src="./vendor/gaugeJS/dist/gauge.min.js"></script>
+    <script src="{{ asset('poskestren/vendor/gaugeJS/dist/gauge.min.js')}}"></script>
 
     <!--  flot-chart js -->
-    <script src="./vendor/flot/jquery.flot.js"></script>
-    <script src="./vendor/flot/jquery.flot.resize.js"></script>
+    <script src="{{ asset('poskestren/vendor/flot/jquery.flot.js')}}"></script>
+    <script src="{{ asset('poskestren/vendor/flot/jquery.flot.resize.js')}}"></script>
 
     <!-- Owl Carousel -->
-    <script src="./vendor/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="{{ asset('poskestren/vendor/owl-carousel/js/owl.carousel.min.js')}}"></script>
 
     <!-- Counter Up -->
-    <script src="./vendor/jqvmap/js/jquery.vmap.min.js"></script>
-    <script src="./vendor/jqvmap/js/jquery.vmap.usa.js"></script>
-    <script src="./vendor/jquery.counterup/jquery.counterup.min.js"></script>
+    <script src="{{ asset('poskestren/vendor/jqvmap/js/jquery.vmap.min.js')}}"></script>
+    <script src="{{ asset('poskestren/vendor/jqvmap/js/jquery.vmap.usa.js')}}"></script>
+    <script src="{{ asset('poskestren/vendor/jquery.counterup/jquery.counterup.min.js')}}"></script>
 
 
-    <script src="./js/dashboard/dashboard-1.js"></script>
+    <script src="{{ asset('poskestren/js/dashboard/dashboard-1.js')}}"></script>
 
 </body>
 
