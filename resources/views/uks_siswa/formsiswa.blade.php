@@ -14,10 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
 
-    <!-- Core CSS -->
-    <link rel="stylesheet" href="{{ asset('poskestren/assets/vendor/css/core.css')}}" />
-    <link rel="stylesheet" href="{{ asset('poskestren/assets/vendor/css/theme-default.css')}}" />
-    <link rel="stylesheet" href="{{ asset('poskestren/assets/css/demo.css')}}" />
+    <link rel="stylesheet" href="{{ asset('poskestren/assets/css/bootstrap.min.css?v2+')}}" />
 
     {{-- bootstrap --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -127,32 +124,6 @@
             </div>
         </div>
     </div>
-
-    </script>
-    <!-- container-scroller -->
-
-    <!-- plugins:js -->
-    <script src="{{ asset('template-admin/vendors/base/vendor.bundle.base.js') }}"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page-->
-    <script src="{{ asset('template-admin/vendors/chart.js/Chart.min.js') }}"></script>
-    <!-- End plugin js for this page-->
-    <!-- inject:js -->
-    <script src="{{ asset('template-admin/js/off-canvas.js') }}"></script>
-    <script src="{{ asset('template-admin/js/hoverable-collapse.js') }}"></script>
-    <script src="{{ asset('template-admin/js/template.js') }}"></script>
-    <script src="{{ asset('template-admin/js/todolist.js') }}"></script>
-    <!-- endinject -->
-    <!-- Custom js for this page-->
-    <script src="{{ asset('template-admin/js/dashboard.js') }}"></script>
-    <script src="{{ asset('bootstrap.min.js') }}"></script>
-    <script src="{{ asset('jquery-3.5.1.slim.min.js') }}"></script>
-    <script src="{{ asset('popper.min.js') }}"></script>
-
-    <!-- End custom js for this page-->
-    <script src="{{ asset('argon/assets/js/core/bootstrap.min.js') }}"></script>
-
-
 
 
     <script>

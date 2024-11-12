@@ -26,6 +26,8 @@ class AdminController extends Controller
     }
     function poskes()
     {
-        return view('poskes.home');
+        $siswa = Siswa::all();
+        $siswi = Siswi::all();
+        return view('poskes.dashboard', compact('siswa', 'siswi'));
     }
 }

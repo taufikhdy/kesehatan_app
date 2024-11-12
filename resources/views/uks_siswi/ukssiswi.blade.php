@@ -18,10 +18,7 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
 
-    <!-- Core CSS -->
-    <link rel="stylesheet" href="{{ asset('poskestren/assets/vendor/css/core.css')}}" />
-    <link rel="stylesheet" href="{{ asset('poskestren/assets/vendor/css/theme-default.css')}}" />
-    <link rel="stylesheet" href="{{ asset('poskestren/assets/css/demo.css')}}" />
+    <link rel="stylesheet" href="{{ asset('poskestren/assets/css/bootstrap.min.css?v2+') }}" />
 
     {{-- bootstrap --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -36,7 +33,8 @@
                 <h2 class="text-white">Data Siswi</h2>
                 <div class="d-flex justify-center align-items-center">
                     <h3 class="p-1">
-                        <a href="{{ route('tmbhsiswi') }}" class="btn btn-success rounded"><i class="bi bi-person-fill-add"></i>tambah pasien</a>
+                        <a href="{{ route('tmbhsiswi') }}" class="btn btn-success rounded"><i
+                                class="bi bi-person-fill-add"></i>tambah pasien</a>
                     </h3>
                     <h3 class="p-1">
                         <a href="/logout" class="btn btn-danger rounded"><i class="bi bi-box-arrow-left"></i> Logout</a>
@@ -71,7 +69,8 @@
                                 <td>
                                     <form action="{{ route('hapus', $sakit->id) }}" method="POST">
                                         @csrf
-                                        <button type="submit" class="btn btn-danger"><i class="bi bi-person-dash-fill"></i> Delete</button>
+                                        <button type="submit" class="btn btn-danger"><i
+                                                class="bi bi-person-dash-fill"></i> Delete</button>
                                     </form>
                                 </td>
                             </tr>
