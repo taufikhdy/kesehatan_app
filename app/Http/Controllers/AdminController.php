@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Siswa;
 use App\Models\Siswi;
+use Carbon\Carbon;
 
 class AdminController extends Controller
 {
@@ -28,6 +29,9 @@ class AdminController extends Controller
     {
         $siswa = Siswa::all();
         $siswi = Siswi::all();
-        return view('poskes.dashboard', compact('siswa', 'siswi'));
+
+        $notsa = Siswa::where('tanggal', Carbon::today()->toDateString())->get();
+        $notsi = Siswi::where('tanggal', Carbon::today()->toDateString())->get();
+        return view('poskes.dashboard', compact('siswa', 'siswi', 'notsa', 'notsi'));
     }
 }
