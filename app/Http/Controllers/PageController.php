@@ -16,4 +16,24 @@ class PageController extends Controller
     public function fullrekammedis(){
         return view('homepage.rekammedis');
     }
+
+    public function showsiswa($id){
+        $siswa = Siswa::find($id);  //ganti model berdasarkan tabel rekam medis
+        if (!$siswa) {
+            return view('homepage.rekammedis')->with('error', 'Data siswa tidak ditemukan.');
+        }else{
+            return view('homepage.showsiswa', compact('siswa'))->with('data Ditemukan');
+        }
+
+    }
+
+    public function showsiswi($id){
+        $siswa = Siswa::findOrFail($id); //ganti model berdasarkan tabel rekam medis
+        if (!$siswa) {
+            return view('homepage.rekammedis')->with('error', 'Data siswa tidak ditemukan.');
+        }else{
+            return view('homepage.showsiswi', compact('siswi'))->with('data Ditemukan');
+        }
+
+    }
 }
