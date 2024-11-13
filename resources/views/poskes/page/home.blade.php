@@ -119,13 +119,14 @@
                     <tbody>
                         @foreach ($notsa as $siswa)
                             <tr style="background-color: rgba(0, 255, 255, 0.20);">
+                                <td class="d-none">{{ $siswa->id}}</td>
                                 <td>{{ $siswa->nama }}</td>
                                 <td>{{ $siswa->kelas }}</td>
                                 <td>{{ $siswa->wali_kelas }}</td>
                                 <td>{{ $siswa->keluhan }}</td>
                                 <td>{{ $siswa->status }}</td>
                                 <td class="text-center">
-                                    <a href=""
+                                    <a href="{{ route('konfirmasi', ['kelas' => $siswa->kelas, 'id' => $siswa->id])}}"
                                         class="btn btn-sm btn-success
                             ">Konfirmasi</a>
                                 </td>
@@ -134,13 +135,14 @@
 
                         @foreach ($notsi as $siswi)
                             <tr style="background-color: rgba(255, 169, 184, 0.20)">
+                                <td class="d-none">{{ $siswi->id}}</td>
                                 <td>{{ $siswi->nama }}</td>
                                 <td>{{ $siswi->kelas }}</td>
                                 <td>{{ $siswi->wali_kelas }}</td>
                                 <td>{{ $siswi->keluhan }}</td>
                                 <td>{{ $siswi->status }}</td>
                                 <td class="text-center">
-                                    <a href="" class="btn btn-sm btn-success
+                                    <a href="{{ route('konfirmasi', ['kelas' => $siswi->kelas, 'id' => $siswi->id])}}" class="btn btn-sm btn-success
                         ">Konfirmasi</a>
                                 </td>
                             </tr>

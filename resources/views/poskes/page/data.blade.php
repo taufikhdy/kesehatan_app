@@ -105,13 +105,14 @@
                                                                         <tbody>
                                                                             @foreach ($siswa as $siswa)
                                                                                 <tr>
+                                                                                    <td class="d-none">{{ $siswa->id}}</td>
                                                                                     <td>{{ $siswa->nama }}</td>
                                                                                     <td>{{ $siswa->kelas }}</td>
                                                                                     <td>{{ $siswa->wali_kelas }}</td>
                                                                                     <td>{{ $siswa->keluhan }}</td>
                                                                                     <td class="text-center">{{ $siswa->tanggal }}</td>
                                                                                     <td class="text-center">
-                                                                                        <a href=""
+                                                                                        <a href="{{ route('konfirmasi', ['kelas'=>$siswa->kelas, 'id'=>$siswa->id])}}" method="POST"
                                                                                             class="btn btn-sm btn-success">Konfirmasi</a>
                                                                                     </td>
                                                                                 </tr>
@@ -151,13 +152,14 @@
                                                                         <tbody>
                                                                             @foreach ($siswi as $siswi)
                                                                                 <tr>
+                                                                                    <td class="d-none">{{ $siswi->id}}</td>
                                                                                     <td>{{ $siswi->nama }}</td>
                                                                                     <td>{{ $siswi->kelas }}</td>
                                                                                     <td>{{ $siswi->wali_kelas }}</td>
                                                                                     <td>{{ $siswi->keluhan }}</td>
                                                                                     <td class="text-center">{{ $siswi->tanggal }}</td>
                                                                                     <td class="text-center">
-                                                                                        <a href=""
+                                                                                        <a href="{{ route('konfirmasi', ['kelas'=>$siswi->kelas, 'id'=>$siswi->id])}}" method="POST"
                                                                                             class="btn btn-sm btn-success">Konfirmasi</a>
                                                                                     </td>
                                                                                 </tr>

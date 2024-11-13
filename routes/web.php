@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\SiswiController;
-use App\Http\Controllers\PoskesController;
 
 
 /*
@@ -60,7 +59,7 @@ Route::get('tmbhsiswa', [SiswaController::class, 'tambah'])->name('tmbhsiswa');
 Route::get('/get-teacher/{nama_kelas}', [SiswaController::class, 'getWaliKelas']);
 
 Route::post('kirimsiswa', [SiswaController::class, 'kirim'])->name('kirimsiswa');
-Route::post('hapus/{id}', [SiswaController::class, 'hapus'])->name('hapus');
+Route::post('hapussiswa/{id}', [SiswaController::class, 'hapus'])->name('hapussiswa');
 
 
 // UKS SISWI
@@ -69,9 +68,13 @@ Route::get('tmbhsiswi', [SiswiController::class, 'tambah'])->name('tmbhsiswi');
 Route::get('/get-teacher/{nama_kelas}', [SiswiController::class, 'getWaliKelas']);
 
 Route::post('kirimsiswi', [SiswiController::class, 'kirim'])->name('kirimsiswi');
-Route::post('hapus/{id}', [SiswiController::class, 'hapus'])->name('hapus');
+Route::post('hapussiswi/{id}', [SiswiController::class, 'hapus'])->name('hapussiswi');
 
 //POSKESTREN
 Route::get('dashboard', [AdminController::class, 'poskes'])->name('dashboard');
-Route::get('data_sakit', [PoskesController::class, 'data'])->name('data_sakit');
+Route::get('data_sakit', [AdminController::class, 'data'])->name('data_sakit');
+
+Route::get('konfirmasi/{kelas}/{id}', [AdminController::class, 'konfirmasi'])->name('konfirmasi');
+
+Route::post('check', [AdminController::class, 'check'])->name('check');
 });
