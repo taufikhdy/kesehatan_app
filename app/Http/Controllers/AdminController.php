@@ -27,11 +27,9 @@ class AdminController extends Controller
     }
     function poskes()
     {
-        $siswa = Siswa::all();
-        $siswi = Siswi::all();
-
         $notsa = Siswa::where('tanggal', Carbon::today()->toDateString())->get();
         $notsi = Siswi::where('tanggal', Carbon::today()->toDateString())->get();
-        return view('poskes.dashboard', compact('siswa', 'siswi', 'notsa', 'notsi'));
+
+        return view('poskes.page.home', compact('notsa', 'notsi'));
     }
 }

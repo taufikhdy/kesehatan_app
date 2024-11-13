@@ -5,11 +5,12 @@ use App\Http\Controllers\SesiController;
 use App\Http\Controllers\pageController;
 use Illuminate\Support\Facades\Route;
 
-//RUTE UKS
+//RUTE
 
 use App\Http\Controllers\SiswaController;
-use App\Http\Controllers\Siswi\Controller;
 use App\Http\Controllers\SiswiController;
+use App\Http\Controllers\PoskesController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -52,7 +53,7 @@ Route::get('showrekamsiswi/{id}',[PageController::class, 'showsiswi'])->name('sh
 
 
 
-
+Route::middleware(['auth'])->group(function(){
 //UKS SISWA
 Route::get('ukssiswa', [SiswaController::class, 'index'])->name('ukssiswa');
 Route::get('tmbhsiswa', [SiswaController::class, 'tambah'])->name('tmbhsiswa');
@@ -69,3 +70,8 @@ Route::get('/get-teacher/{nama_kelas}', [SiswiController::class, 'getWaliKelas']
 
 Route::post('kirimsiswi', [SiswiController::class, 'kirim'])->name('kirimsiswi');
 Route::post('hapus/{id}', [SiswiController::class, 'hapus'])->name('hapus');
+
+//POSKESTREN
+Route::get('dashboard', [AdminController::class, 'poskes'])->name('dashboard');
+Route::get('data_sakit', [PoskesController::class, 'data'])->name('data_sakit');
+});
