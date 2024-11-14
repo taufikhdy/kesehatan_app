@@ -41,16 +41,16 @@
 
         @keyframes badge {
 
-            0%{
+            0% {
                 transform: scale(1);
             }
 
-            50%{
+            50% {
                 background-color: orange;
                 color: white
             }
 
-            100%{
+            100% {
                 transform: scale(1.1)
             }
         }
@@ -62,6 +62,7 @@
 </head>
 
 <body>
+    <div class="loader"></div>
     <div class="container-xxl position-relative bg-white d-flex p-0">
         <!-- Spinner Start -->
         <div id="spinner"

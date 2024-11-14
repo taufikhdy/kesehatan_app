@@ -5,8 +5,7 @@
         </a>
         <div class="d-flex align-items-center ms-4 mb-4">
             <div class="position-relative">
-                <img class="rounded-circle" src="img/user.jpg" alt=""
-                    style="width: 40px; height: 40px;">
+                <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
                 <div
                     class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
                 </div>
@@ -17,8 +16,11 @@
             </div>
         </div>
         <div class="navbar-nav w-100">
-            <a href="{{ route('dashboard')}}" class="nav-item nav-link" class="{{ Request::is('') ? 'active' : '' }}"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-            <a href="{{ route('data_sakit')}}" class="nav-item nav-link" class="{{ Request::is('data_sakit') ? 'active' : '' }}"><i class="bi bi-clipboard2-data me-2"></i>Data Sakit</a>
+            <a href="{{ route('dashboard') }}" class="nav-item nav-link"
+                class="{{ Request::is('') ? 'active' : '' }}"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+            <a href="{{ route('data_sakit') }}" class="nav-item nav-link"
+                class="{{ Request::is('data_sakit') ? 'active' : '' }}"><i class="bi bi-clipboard2-data me-2"></i>Data
+                Sakit</a>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
                         class="far fa-file-alt me-2"></i>More</a>
@@ -27,9 +29,10 @@
                     <a href="signup.html" class="dropdown-item py-1">Sign Up</a>
                     <a href="404.html" class="dropdown-item py-1">404 Error</a>
                     <a href="blank.html" class="dropdown-item py-1">Blank Page</a>
-                    <a href="/logout" class="dropdown-item text-white bg-danger py-1"><i class="bi bi-x-square"></i>
-                        Logout</a>
                 </div>
+                <a href="/logout" class="nav-item nav-link text-danger"><i class="bi bi-x-circle-fill text-danger">
+                    </i> LOGOUT
+                </a>
             </div>
         </div>
     </nav>

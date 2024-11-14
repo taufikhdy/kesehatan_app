@@ -33,10 +33,12 @@ class AdminController extends Controller
     // UNTUK POSKES
     function poskes()
     {
+        $totalm = Siswa::all()->count();
+        $totalw = Siswi::all()->count();
 
         $notsa = Siswa::where('tanggal', Carbon::today()->toDateString())->get();
         $notsi = Siswi::where('tanggal', Carbon::today()->toDateString())->get();
 
-        return view('poskes.page.home', compact('notsa', 'notsi'));
+        return view('poskes.page.home', compact('totalm', 'totalw', 'notsa', 'notsi'));
     }
 }
