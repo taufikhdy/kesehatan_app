@@ -11,6 +11,7 @@ use Carbon\Carbon;
 
 class AdminController extends Controller
 {
+
     function index()
     {
         return view('admin');
@@ -33,6 +34,7 @@ class AdminController extends Controller
     // UNTUK POSKES
     function poskes()
     {
+
         $notsa = Siswa::where('tanggal', Carbon::today()->toDateString())->get();
         $notsi = Siswi::where('tanggal', Carbon::today()->toDateString())->get();
 
@@ -51,10 +53,24 @@ class AdminController extends Controller
 
     function konfirmasi($kelas, $id){
 
-        if(in_array($kelas, ['XI IPA 1', 'XI IPS 1', 'XI A PPLG', 'XI B APL'])){
+        $lk = [
+            'XI A PPLG',
+            'XI B APL',
+            'XI IPA 1',
+            'XI IPS 1',
+        ];
+
+        $pr = [
+            'XI C APL'
+        ];
+
+
+        if(in_array($kelas, $lk)){
             $data = Siswa::findOrFail($id);
             return view('poskes.page.konfirmasi', compact('data'));
-        }elseif(in_array($kelas, ['XI C APL'])){
+        }
+
+        elseif(in_array($kelas, $pr)){
             $data = Siswi::findOrFail($id);
             return view('poskes.page.konfirmasi', compact('data'));
         }
@@ -63,18 +79,29 @@ class AdminController extends Controller
 
     function check(Request $request){
 
-        $create = Tb_Konfirmasi::create($request->all());
+        Tb_Konfirmasi::create($request->all());
         $nama = $request->input('nama');
         $kelas = $request->input('kelas');
 
-        if(in_array($kelas, ['XI IPA 1', 'XI IPS 1', 'XI A PPLG', 'XI B APL'])){
+        $lk = [
+            'XI A PPLG',
+            'XI B APL',
+            'XI IPA 1',
+            'XI IPS 1',
+        ];
+
+        $pr = [
+            'XI C APL'
+        ];
+
+        if(in_array($kelas, $lk)){
             $siswa = Siswa::where('nama', $nama)
                         ->where('kelas', $kelas)
                         ->first();
             $siswa->delete();
         }
 
-        elseif(in_array($kelas, ['XI C APL'])){
+        elseif(in_array($kelas, $pr)){
             $siswi = Siswi::where('nama', $nama)
                         ->where('kelas', $kelas)
                         ->first();
