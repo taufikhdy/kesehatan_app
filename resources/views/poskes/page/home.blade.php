@@ -19,7 +19,7 @@
             <div class="nav-item dropdown" id="notif">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
 
-                    @if ($badgem OR $badgew)
+                    @if ($badgem or $badgew)
                         <i class="bi bi-bell-fill me-lg-2" id="badge"></i>
                     @else
                         <i class="bi bi-bell me-lg-2"></i>
@@ -48,6 +48,14 @@
             </div>
         </div>
     </nav>
+
+    @if ($badgem or $badgew)
+        <div class="alert alert-warning alert-dismissible fade show fixed-bottom m-0" role="alert">
+            <strong>Data baru telah ditemukan, segera periksa</strong> <button type="button" class="btn-close"
+                data-bs-dismiss="alert" aria-label="close"></button>
+        </div>
+    @endif
+
     <!-- Sale & Revenue Start -->
     <div class="container-fluid pt-4 px-4">
         <div class="row g-4">
@@ -102,7 +110,7 @@
         <div class="bg-light text-center rounded p-4">
             <div class="d-flex align-items-center justify-content-between mb-4">
                 <h6 class="mb-0">Tabel Cepat</h6>
-                <a href="{{ route('data_sakit')}}">Show All</a>
+                <a href="{{ route('data_sakit') }}">Show All</a>
             </div>
             <div class="table-responsive text-nowrap">
                 <table class="table text-start align-middle table-bordered table-hover mb-0" style="border: darkgray;">
@@ -119,14 +127,14 @@
                     <tbody>
                         @foreach ($notsa as $siswa)
                             <tr style="background-color: rgba(0, 255, 255, 0.20);">
-                                <td class="d-none">{{ $siswa->id}}</td>
+                                <td class="d-none">{{ $siswa->id }}</td>
                                 <td>{{ $siswa->nama }}</td>
                                 <td>{{ $siswa->kelas }}</td>
                                 <td>{{ $siswa->wali_kelas }}</td>
                                 <td>{{ $siswa->keluhan }}</td>
                                 <td>{{ $siswa->status }}</td>
                                 <td class="text-center">
-                                    <a href="{{ route('konfirmasi', ['kelas' => $siswa->kelas, 'id' => $siswa->id])}}"
+                                    <a href="{{ route('konfirmasi', ['kelas' => $siswa->kelas, 'id' => $siswa->id]) }}"
                                         class="btn btn-sm btn-success
                             ">Konfirmasi</a>
                                 </td>
@@ -135,14 +143,15 @@
 
                         @foreach ($notsi as $siswi)
                             <tr style="background-color: rgba(255, 169, 184, 0.20)">
-                                <td class="d-none">{{ $siswi->id}}</td>
+                                <td class="d-none">{{ $siswi->id }}</td>
                                 <td>{{ $siswi->nama }}</td>
                                 <td>{{ $siswi->kelas }}</td>
                                 <td>{{ $siswi->wali_kelas }}</td>
                                 <td>{{ $siswi->keluhan }}</td>
                                 <td>{{ $siswi->status }}</td>
                                 <td class="text-center">
-                                    <a href="{{ route('konfirmasi', ['kelas' => $siswi->kelas, 'id' => $siswi->id])}}" class="btn btn-sm btn-success
+                                    <a href="{{ route('konfirmasi', ['kelas' => $siswi->kelas, 'id' => $siswi->id]) }}"
+                                        class="btn btn-sm btn-success
                         ">Konfirmasi</a>
                                 </td>
                             </tr>

@@ -97,7 +97,7 @@
                 <div class="mb-5 mt-3">
                     <label for="catatan" class="form-label">Catatan Dokter</label>
                     <textarea rows="5" name="catatan" id="catatan"
-                        class="form-control @error('catatan') is-invalid @enderror" required placeholder="Catatan : ( Opsional )"></textarea>
+                        class="form-control @error('catatan') is-invalid @enderror" required placeholder="Catatan Dokter :"></textarea>
                     @error('catatan')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror

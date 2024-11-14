@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\SiswiController;
-
+use App\Http\Controllers\PoskesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,9 +72,9 @@ Route::post('hapussiswi/{id}', [SiswiController::class, 'hapus'])->name('hapussi
 
 //POSKESTREN
 Route::get('dashboard', [AdminController::class, 'poskes'])->name('dashboard');
-Route::get('data_sakit', [AdminController::class, 'data'])->name('data_sakit');
+Route::get('data_sakit', [PoskesController::class, 'data'])->name('data_sakit');
 
-Route::get('konfirmasi/{kelas}/{id}', [AdminController::class, 'konfirmasi'])->name('konfirmasi');
+Route::get('konfirmasi/{kelas}/{id}', [PoskesController::class, 'konfirmasi'])->name('konfirmasi');
 
-Route::post('check', [AdminController::class, 'check'])->name('check');
+Route::post('check', [PoskesController::class, 'check'])->name('check');
 });
