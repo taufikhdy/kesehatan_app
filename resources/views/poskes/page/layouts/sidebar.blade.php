@@ -16,10 +16,8 @@
             </div>
         </div>
         <div class="navbar-nav w-100">
-            <a href="{{ route('dashboard') }}" class="nav-item nav-link"
-                class="{{ Request::is('') ? 'active' : '' }}"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-            <a href="{{ route('data_sakit') }}" class="nav-item nav-link"
-                class="{{ Request::is('data_sakit') ? 'active' : '' }}"><i class="bi bi-clipboard2-data me-2"></i>Data
+            <a href="{{ route('dashboard') }}" class="{{ Request::is('dashboard') ? 'active' : '' }} nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+            <a href="{{ route('data_sakit') }}" class="{{ Request::is('data_sakit') ? 'active' : '' }} nav-item nav-link"><i class="bi bi-clipboard2-data me-2"></i>Data
                 Sakit</a>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
