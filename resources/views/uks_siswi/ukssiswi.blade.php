@@ -77,7 +77,7 @@
                                 <td>{{ $sakit->status }}</td>
                                 <td>{{ $sakit->tanggal }}</td>
                                 <td>
-                                    <form action="{{ route('hapus', $sakit->id) }}" method="POST">
+                                    <form action="{{ route('hapussiswi', $sakit->id) }}" method="POST">
                                         @csrf
                                         <button type="submit" class="btn btn-danger"><i
                                                 class="bi bi-person-dash-fill"></i> Delete</button>
