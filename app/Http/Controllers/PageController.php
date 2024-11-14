@@ -36,4 +36,8 @@ class PageController extends Controller
         }
 
     }
+
+    public function tentang(){
+        return view('homepage.tentang');
+    }
 }

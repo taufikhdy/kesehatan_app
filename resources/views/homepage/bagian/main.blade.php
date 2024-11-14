@@ -48,6 +48,31 @@ https://templatemo.com/tm-570-chain-app-dev
                 align-items: center;
                 justify-content: space-between; /* Ini untuk menjaga logo di kiri dan menu di kanan */
                 }
+
+                .faris {
+            color: white;
+        }
+
+        .fariss {
+            color: white;
+        }
+
+        .fariss:hover {
+            color: white;
+        }
+        @media (max-width: 992px) {
+            .faris {
+                color: black;
+            }
+
+            .fariss {
+                color: black;
+            }
+
+            .fariss:hover {
+                color: white;
+            }
+        }
     </style>
 
   </head>
@@ -55,6 +80,40 @@ https://templatemo.com/tm-570-chain-app-dev
 <body>
 
 @include('homepage.bagian.navbar')
+<div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row service">
+                  <div class="faris col-lg-12">
+                    <h3>"Kesehatan Adalah Mahkota, yang
+                        Tidak diketahui kecuali oleh Orang yang Sakit"</h3>
+                    <a class="fariss">kesehatan adalah hal yang sangat berharga, namun sering kali tidak disadari nilainya hingga seseorang jatuh sakit. Ini mengingatkan kita untuk menghargai dan menjaga kesehatan selagi masih memilikinya.</a>
+                  </div>
+                  {{-- <div class="col-lg-12">
+                    <div class="white-button first-button scroll-to-section">
+                      <a href="#contact">Free Quote <i class="fab fa-apple"></i></a>
+                    </div>
+                    <div class="white-button scroll-to-section">
+                      <a href="#contact">Free Quote <i class="fab fa-google-play"></i></a>
+                    </div>
+                  </div> --}}
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="3s" data-wow-delay="0.5s">
+                <img src="{{ asset('image/logo.png') }}" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 @yield('content')
 @include('homepage.bagian.footer')
 

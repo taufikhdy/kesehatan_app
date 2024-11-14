@@ -1,47 +1,12 @@
 @extends('homepage.bagian.main')
 @section('content')
-<div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="row">
-            <div class="col-lg-6 align-self-center">
-              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                <div class="row service">
-                  <div class="col-lg-12">
-                    <h3>"Kesehatan Adalah Mahkota, yang
-                        Tidak diketahui kecuali oleh Orang yang Sakit"</h3>
-                    <p>kesehatan adalah hal yang sangat berharga, namun sering kali tidak disadari nilainya hingga seseorang jatuh sakit. Ini mengingatkan kita untuk menghargai dan menjaga kesehatan selagi masih memilikinya.</p>
-                  </div>
-                  {{-- <div class="col-lg-12">
-                    <div class="white-button first-button scroll-to-section">
-                      <a href="#contact">Free Quote <i class="fab fa-apple"></i></a>
-                    </div>
-                    <div class="white-button scroll-to-section">
-                      <a href="#contact">Free Quote <i class="fab fa-google-play"></i></a>
-                    </div>
-                  </div> --}}
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="right-image wow fadeInRight" data-wow-duration="3s" data-wow-delay="0.5s">
-                <img src="{{ asset('image/logo.png') }}" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div id="services" class="services section">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
             <h4>Ketahui <em>Tips &amp; Cara Menjaga</em> Kesehatan</h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
+            <img src="{{ asset('landing/assets/images/heading-line-dec.png') }}" alt="">
             <p>Merawat kesehatan adalah <a class="text-primary">investasi jangka panjang</a> yang dapat meningkatkan <a class="text-primary">kualitas hidup Anda</a>. Berikut adalah beberapa cara untuk menjaga kesehatan dengan baik: </p>
           </div>
         </div>

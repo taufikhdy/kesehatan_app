@@ -1,3 +1,13 @@
+<style>
+    /* Menambahkan warna biru muda saat link aktif */
+.navbar-nav .nav-item .nav-link.active {
+    color: #00bcd4;  /* Biru muda */
+}
+.navbar-nav .nav-item .nav-link:hover{
+    color:#00bcd4;
+}
+
+</style>
 <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
     <div class="container">
         <div class="row">
@@ -27,10 +37,10 @@
                                 <a class="nav-link {{ Request::routeIs('fullrekammedis') ? 'active' : '' }}" href="{{ route('fullrekammedis') }}">Data Rekam Medis</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Tentang</a>
+                                <a class="nav-link {{ Request::routeIs('tentang') ? 'active' : '' }}" href="{{ route('tentang') }}">Tentang</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn btn-primary text-white" href="{{ route('login2') }}">
+                                <a class="nav-link btn text-white" href="{{ route('login2') }}">
                                     <i class="fa fa-sign-in-alt"></i> Sign In Now
                                 </a>
                             </li>

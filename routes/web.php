@@ -48,7 +48,7 @@ Route::get('dataPasien', [PageController::class, 'fulldata'])->name('fulldata');
 Route::get('dataRekamMedis', [PageController::class, 'fullrekammedis'])->name('fullrekammedis');
 Route::get('showrekamsiswa/{id}',[PageController::class, 'showsiswa'])->name('show.siswa');
 Route::get('showrekamsiswi/{id}',[PageController::class, 'showsiswi'])->name('show.siswi');
-
+Route::get('tentang', [PageController::class, 'tentang'])->name('tentang');
 
 
 
