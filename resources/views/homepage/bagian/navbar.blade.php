@@ -15,6 +15,7 @@
                 <!-- Navbar menggunakan Bootstrap -->
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <!-- Logo -->
+
                     <a class="navbar-brand" href="{{ route('landing') }}">
                         <img height="50" src="{{ asset('image/logopanjang.png') }}" alt="SMK Al-Ittihad" class="d-inline-block align-top">
                     </a>
@@ -27,19 +28,19 @@
                     <!-- Menu -->
                     <div class="collapse navbar-collapse bg-white" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link {{ Request::routeIs('landing') ? 'active' : '' }}" href="{{ route('landing') }}">Home</a>
+                            <li class="nav-item align-items-center">
+                                <a class="nav-link {{ Request::routeIs('landing') ? 'active' : '' }}" href="{{ route('landing') }}"><i class="fas fa-home me-2 "></i>Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link {{ Request::routeIs('fulldata') ? 'active' : '' }}" href="{{ route('fulldata') }}">Data</a>
+                            <li class="nav-item align-items-center">
+                                <a class="nav-link {{ Request::routeIs('fulldata') ? 'active' : '' }}" href="{{ route('fulldata') }}"><i class="fas fa-stethoscope me-2"></i>Data</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link {{ Request::routeIs('fullrekammedis') ? 'active' : '' }}" href="{{ route('fullrekammedis') }}">Data Rekam Medis</a>
+                            <li class="nav-item align-items-center">
+                                <a class="nav-link {{ Request::routeIs('fullrekammedis') ? 'active' : '' }}" href="{{ route('fullrekammedis') }}"><i class="fas fa-user-md me-2"></i>Data Rekam Medis</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link {{ Request::routeIs('tentang') ? 'active' : '' }}" href="{{ route('tentang') }}">Tentang</a>
+                            <li class="nav-item align-items-center">
+                                <a class="nav-link {{ Request::routeIs('tentang') ? 'active' : '' }}" href="{{ route('tentang') }}"><i class="fas fa-question-circle me-2"></i>Tentang</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item align-items-center">
                                 <a class="nav-link btn text-white" href="{{ route('login2') }}">
                                     <i class="fa fa-sign-in-alt"></i> Sign In Now
                                 </a>
