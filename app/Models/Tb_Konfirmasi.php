@@ -9,5 +9,15 @@ class Tb_Konfirmasi extends Model
 {
     use HasFactory;
     protected $table = 'tb_konfirmasi';
-    protected $fillable = ['nama', 'kelas', 'wali_kelas', 'keluhan', 'status', 'catatan', 'tanggal'];
+    protected $fillable = [
+        'nama',
+        'kelas',
+        'wali_kelas',
+        'keluhan',
+        'status',
+        'tgl_sakit',
+        'tgl_berobat',
+        'obat',
+        'catatan'
+    ];
 }

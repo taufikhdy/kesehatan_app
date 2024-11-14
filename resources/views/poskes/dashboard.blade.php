@@ -35,11 +35,11 @@
 
 
     <style>
-        #danger {
-            animation: notif .8s infinite;
+        #badge {
+            animation: badge .8s infinite;
         }
 
-        @keyframes notif {
+        @keyframes badge {
 
             0%{
                 transform: scale(1);
@@ -55,7 +55,7 @@
             }
         }
 
-        #danger:hover {
+        #badge:hover {
             animation: none;
         }
     </style>

@@ -25,6 +25,15 @@
                 @csrf
 
                 <div class="mb-3">
+                    <label for="nama" class="form-label">Nama Lengkap</label>
+                    <input type="text" name="nama" id="nama" value="{{ old('nama', $data->nama)}}"
+                        class="form-control @error('nama') is-invalid @enderror" readonly required>
+                    @error('nama')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                <div class="mb-3">
                     <label for="kelas" class="form-label">Kelas</label>
                     <input type="text" name="kelas" id="kelas" value="{{ old('kelas', $data->kelas)}}" class="form-control @error('kelas') is-invalid @enderror" readonly required>
 
@@ -39,15 +48,6 @@
                         class="form-control @error('wali_kelas') is-invalid @enderror" required value="{{ old('wali_kelas', $data->wali_kelas)}}"
                         placeholder="Wali Kelas" readonly>
                     @error('wali_kelas')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
-                </div>
-
-                <div class="mb-3">
-                    <label for="nama" class="form-label">Nama Lengkap</label>
-                    <input type="text" name="nama" id="nama" value="{{ old('nama', $data->nama)}}"
-                        class="form-control @error('nama') is-invalid @enderror" readonly required>
-                    @error('nama')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
@@ -76,8 +76,26 @@
 
                 </div>
 
+                <div class="mb-5">
+                    <label for="tgl_sakit" class="form-label">Tanggal Sakit</label>
+                    <input type="text" name="tgl_sakit" id="tgl_sakit" value="{{ old('tgl_sakit', $data->tanggal)}}"
+                        class="form-control @error('tgl_sakit') is-invalid @enderror" readonly required>
+                    @error('tgl_sakit')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                <div class="mb-5">
+                    <label for="tgl_berobat" class="form-label">tgl_berobat Berobat</label>
+                    <input type="text" name="tgl_berobat" id="tgl_berobat" value="{{ today()->toDateString()}}"
+                        class="form-control @error('tgl_berobat') is-invalid @enderror" readonly required>
+                    @error('tgl_berobat')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+
                 <div class="mb-5 mt-3">
-                    <label for="catatan" class="form-label">Catatan Pengobatan</label>
+                    <label for="catatan" class="form-label">Catatan Dokter</label>
                     <textarea rows="5" name="catatan" id="catatan"
                         class="form-control @error('catatan') is-invalid @enderror" required placeholder="Catatan : ( Opsional )"></textarea>
                     @error('catatan')
@@ -85,11 +103,11 @@
                     @enderror
                 </div>
 
-                <div class="mb-5">
-                    <label for="tanggal" class="form-label">Tanggal Berobat</label>
-                    <input type="text" name="tanggal" id="tanggal" value="{{ today()->toDateString()}}"
-                        class="form-control @error('tanggal') is-invalid @enderror" readonly required>
-                    @error('tanggal')
+                <div class="mb-5 mt-3">
+                    <label for="obat" class="form-label">Catatan Obat</label>
+                    <textarea rows="5" name="obat" id="obat"
+                        class="form-control @error('obat') is-invalid @enderror" required placeholder="obat yang diberikan"></textarea>
+                    @error('obat')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>

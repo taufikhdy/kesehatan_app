@@ -62,7 +62,24 @@ class AdminController extends Controller
     }
 
     function check(Request $request){
-        Tb_Konfirmasi::create($request->all());
+
+        $create = Tb_Konfirmasi::create($request->all());
+        $nama = $request->input('nama');
+        $kelas = $request->input('kelas');
+
+        if(in_array($kelas, ['XI IPA 1', 'XI IPS 1', 'XI A PPLG', 'XI B APL'])){
+            $siswa = Siswa::where('nama', $nama)
+                        ->where('kelas', $kelas)
+                        ->first();
+            $siswa->delete();
+        }
+
+        elseif(in_array($kelas, ['XI C APL'])){
+            $siswi = Siswi::where('nama', $nama)
+                        ->where('kelas', $kelas)
+                        ->first();
+            $siswi->delete();
+        }
 
         return redirect()->route('data_sakit');
     }

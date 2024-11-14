@@ -11,16 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tb__konfirmasi', function (Blueprint $table) {
+        Schema::create('tb_konfirmasi', function (Blueprint $table) {
             $table->id();
 
+            $table->string('nama');
             $table->string('kelas');
             $table->string('wali_kelas');
-            $table->string('nama');
             $table->string('keluhan');
             $table->string('status');
+            $table->date('tgl_sakit');
+            $table->date('tgl_berobat'); //sama dengan tgl kunjungan
+            $table->string('obat');
             $table->text('catatan');
-            $table->date('tanggal');
 
             $table->timestamps();
         });
@@ -31,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tb__konfirmasi');
+        Schema::dropIfExists('tb_konfirmasi');
     }
 };

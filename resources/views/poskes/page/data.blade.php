@@ -12,15 +12,15 @@
         </form>
 
         @php
-            $badge = $notsa->isNotEmpty();
-            $badge = $notsi->isNotempty();
+            $badgem = $notsa->isNotEmpty();
+            $badgew = $notsi->isNotempty();
         @endphp
         <div class="navbar-nav align-items-center ms-auto">
             <div class="nav-item dropdown" id="notif">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
 
-                    @if ($badge)
-                        <i class="bi bi-bell-fill me-lg-2" id="danger"></i>
+                    @if ($badgem OR $badgew)
+                        <i class="bi bi-bell-fill me-lg-2" id="badge"></i>
                         <span class="d-none d-lg-inline-flex">Notification</span>
                     @else
                         <i class="bi bi-bell me-lg-2"></i>
