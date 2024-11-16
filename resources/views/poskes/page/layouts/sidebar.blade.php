@@ -20,14 +20,14 @@
             <a href="{{ route('data_sakit') }}" class="{{ Request::is('data_sakit') ? 'active' : '' }} nav-item nav-link"><i class="bi bi-clipboard2-data me-2"></i>Data
                 Sakit</a>
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
+                {{-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
                         class="far fa-file-alt me-2"></i>More</a>
                 <div class="dropdown-menu bg-transparent border-0">
                     <a href="signin.html" class="dropdown-item py-1">Sign In</a>
                     <a href="signup.html" class="dropdown-item py-1">Sign Up</a>
                     <a href="404.html" class="dropdown-item py-1">404 Error</a>
                     <a href="blank.html" class="dropdown-item py-1">Blank Page</a>
-                </div>
+                </div> --}}
                 <a href="/logout" class="nav-item nav-link text-danger"><i class="bi bi-x-circle-fill text-danger">
                     </i> LOGOUT
                 </a>

@@ -49,13 +49,6 @@
         </div>
     </nav>
 
-    @if ($badgem or $badgew)
-        <div class="alert alert-warning alert-dismissible fade show fixed-bottom m-0" role="alert">
-            <strong>Data baru telah ditemukan, segera periksa</strong> <button type="button" class="btn-close"
-                data-bs-dismiss="alert" aria-label="close"></button>
-        </div>
-    @endif
-
     <!-- Sale & Revenue Start -->
     <div class="container-fluid pt-4 px-4">
         <div class="row g-4">
@@ -64,7 +57,7 @@
                     <i class="fa fa-chart-line fa-3x text-primary"></i>
                     <div class="ms-3">
                         <p class="mb-2">Data Siswa Sakit</p>
-                        <h6 class="mb-0">{{$totalm}}</h6>
+                        <h6 class="mb-0">{{ $totalm }}</h6>
                     </div>
                 </div>
             </div>
@@ -73,7 +66,7 @@
                     <i class="fa fa-chart-bar fa-3x text-primary"></i>
                     <div class="ms-3">
                         <p class="mb-2">Data Siswi Sakit</p>
-                        <h6 class="mb-0">{{$totalw}}</h6>
+                        <h6 class="mb-0">{{ $totalw }}</h6>
                     </div>
                 </div>
             </div>
@@ -82,7 +75,7 @@
                     <i class="fa fa-chart-area fa-3x text-primary"></i>
                     <div class="ms-3">
                         <p class="mb-2">Jumlah Keseluruhan</p>
-                        <h6 class="mb-0">{{$totalm + $totalw}}</h6>
+                        <h6 class="mb-0">{{ $totalm + $totalw }}</h6>
                     </div>
                 </div>
             </div>
@@ -167,7 +160,22 @@
                     <div id="calender"></div>
                 </div>
             </div>
+            <div class="col-sm-12 col-md-6 col-xl-6">
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="alert alert-success alert-dismissible fade show m-0" role="alert">
+                        <strong>Selalu Perkisa Data Agar Tidak Ada Siswa / Siswi Sakit Yang Terlewati</strong> <button
+                            type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Widgets End -->
+
+    @if ($badgem or $badgew)
+        <div class="alert alert-warning alert-dismissible fade show fixed-bottom m-0" role="alert">
+            <strong>Data baru telah ditemukan, segera periksa</strong> <button type="button" class="btn-close"
+                data-bs-dismiss="alert" aria-label="close"></button>
+        </div>
+    @endif
 @endsection
