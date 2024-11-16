@@ -12,16 +12,8 @@ class PageController extends Controller
         $sakit = Siswa::all();
         $siswisakit = Siswi::all();
 
-        $lk = [
-            'XI A PPLG',
-            'XI B APL',
-            'XI IPA 1',
-            'XI IPS 1',
-        ];
-
-        $pr = [
-            'XI C APL'
-        ];
+        $lk = Siswa::pluck('kelas')->toArray();
+        $pr = Siswi::pluck('kelas')->toArray();
 
         $siswaberobat = Tb_Konfirmasi::where('kelas', $lk)->get();
         $siswiberobat = Tb_Konfirmasi::where('kelas', $pr)->get();
@@ -29,16 +21,8 @@ class PageController extends Controller
     }
 
     public function fullrekammedis(){
-        $lk = [
-            'XI A PPLG',
-            'XI B APL',
-            'XI IPA 1',
-            'XI IPS 1',
-        ];
-
-        $pr = [
-            'XI C APL'
-        ];
+        $lk = Siswa::pluck('kelas')->toArray();
+        $pr = Siswi::pluck('kelas')->toArray();
 
         $siswaberobat = Tb_Konfirmasi::where('kelas', $lk)->get();
         $siswiberobat = Tb_Konfirmasi::where('kelas', $pr)->get();
