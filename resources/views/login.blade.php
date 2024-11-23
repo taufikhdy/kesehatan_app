@@ -10,7 +10,7 @@
     <title>LOGIN</title>
     <link rel="shortcut icon" href="{{ asset('image/logo.png') }}" type="image/x-icon">
 
-    <!-- Libraries Stylesheet -->
+
     <link href="{{ asset('poskess/lib/animate/animate.min.css') }}" rel="stylesheet">
 
     <style>

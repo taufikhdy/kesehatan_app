@@ -25,7 +25,7 @@
                         <i class="bi bi-bell me-lg-2"></i>
                     @endif
 
-                    <span class="d-none d-lg-inline-flex">Notification</span>
+                    <span class="d-none d-lg-inline-flex">Notifikasi</span>
 
                 </a>
                 <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
@@ -42,19 +42,18 @@
                             <small>{{ $notif->tanggal }}</small>
                         </a>
                     @endforeach
-                    <hr class="dropdown-divider">
-                    <a href="#" class="dropdown-item text-center">See all notifications</a>
+                    {{-- <hr class="dropdown-divider">
+                    <a href="#" class="dropdown-item text-center">Lihat Semua notifikasi</a> --}}
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Sale & Revenue Start -->
     <div class="container-fluid pt-4 px-4">
         <div class="row g-4">
             <div class="col-sm-6 col-xl-4">
                 <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                    <i class="fa fa-chart-line fa-3x text-primary"></i>
+                    <i class="fa fa-chart-bar fa-3x text-primary"></i>
                     <div class="ms-3">
                         <p class="mb-2">Data Siswa Sakit</p>
                         <h6 class="mb-0">{{ $totalm }}</h6>
@@ -63,7 +62,7 @@
             </div>
             <div class="col-sm-6 col-xl-4">
                 <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                    <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                    <i class="fa fa-chart-bar fa-3x" style="color: deeppink;"></i>
                     <div class="ms-3">
                         <p class="mb-2">Data Siswi Sakit</p>
                         <h6 class="mb-0">{{ $totalw }}</h6>
@@ -81,20 +80,15 @@
             </div>
         </div>
     </div>
-    <!-- Sale & Revenue End -->
 
 
-    <!-- Sales Chart Start -->
-
-    <!-- Sales Chart End -->
 
 
-    <!-- Recent Sales Start -->
     <div class="container-fluid pt-4 px-4">
         <div class="bg-light text-center rounded p-4">
             <div class="d-flex align-items-center justify-content-between mb-4">
                 <h6 class="mb-0">Tabel Cepat</h6>
-                <a href="{{ route('data_sakit') }}">Show All</a>
+                <a href="{{ route('data_sakit') }}">Lihat Semua</a>
             </div>
             <div class="table-responsive text-nowrap">
                 <table class="table text-start align-middle table-bordered table-hover mb-0" style="border: darkgray;">
@@ -145,17 +139,16 @@
             </div>
         </div>
     </div>
-    <!-- Recent Sales End -->
 
 
-    <!-- Widgets Start -->
+
+
     <div class="container-fluid pt-4 px-4">
         <div class="row g-4">
             <div class="col-sm-12 col-md-6 col-xl-6">
                 <div class="h-100 bg-light rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Calender</h6>
-                        <a href="">Show All</a>
+                        <h6 class="mb-0">Kalender</h6>
                     </div>
                     <div id="calender"></div>
                 </div>
@@ -163,14 +156,14 @@
             <div class="col-sm-12 col-md-6 col-xl-6">
                 <div class="d-flex align-items-center justify-content-between mb-4">
                     <div class="alert alert-success alert-dismissible fade show m-0" role="alert">
-                        <strong>Selalu Perkisa Data Agar Tidak Ada Siswa / Siswi Sakit Yang Terlewati</strong> <button
+                        <strong>Pastikan data diperiksa saksama agar tidak ada siswa sakit yang terlewat</strong> <button
                             type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Widgets End -->
+
 
     @if ($badgem or $badgew)
         <div class="alert alert-warning alert-dismissible fade show fixed-bottom m-0" role="alert">

@@ -30,7 +30,7 @@ class PageController extends Controller
     }
 
     public function showsiswa($id){
-        $siswaberobat = Tb_Konfirmasi::find($id);  //ganti model berdasarkan tabel rekam medis
+        $siswaberobat = Tb_Konfirmasi::find($id);
         if (!$siswaberobat) {
             return view('homepage.rekammedis')->with('error', 'Data siswa tidak ditemukan.');
         }else{
@@ -40,7 +40,7 @@ class PageController extends Controller
     }
 
     public function showsiswi($id){
-        $siswiberobat = Tb_Konfirmasi::find($id); //ganti model berdasarkan tabel rekam medis
+        $siswiberobat = Tb_Konfirmasi::find($id);
         if (!$siswiberobat) {
             return view('homepage.rekammedis')->with('error', 'Data siswa tidak ditemukan.');
         }else{

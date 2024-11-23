@@ -8,7 +8,7 @@
 }
 
 </style>
-<header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+<header class="header-area header-sticky wow slideInDown" id="header" data-wow-duration="0.75s" data-wow-delay="0s">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -26,7 +26,7 @@
                     </button>
 
                     <!-- Menu -->
-                    <div class="collapse navbar-collapse bg-white" id="navbarNav">
+                    <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item align-items-center">
                                 <a class="nav-link {{ Request::routeIs('landing') ? 'active' : '' }}" href="{{ route('landing') }}"><i class="fas fa-home me-2 "></i>Home</a>

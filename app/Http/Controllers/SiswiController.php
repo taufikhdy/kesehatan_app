@@ -50,7 +50,7 @@ class SiswiController extends Controller
             'keluhan' => 'required|string|max:255',
             'status' => 'required|string|max:255',
             'tanggal' => 'required|date',
-            // 'description' => 'nullable|string',
+            // 'deskripsi' => 'nullable|string',
         ]);
 
         Siswi::create($request->all());

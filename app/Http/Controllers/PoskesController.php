@@ -52,14 +52,10 @@ class PoskesController extends Controller
         $pr = Siswi::pluck('kelas')->toArray();
 
         if (in_array($kelas, $lk)) {
-            $siswa = Siswa::where('nama', $nama)
-                ->where('kelas', $kelas)
-                ->first();
+            $siswa = Siswa::where('nama', $nama)->where('kelas', $kelas)->first();
             $siswa->delete();
         } elseif (in_array($kelas, $pr)) {
-            $siswi = Siswi::where('nama', $nama)
-                ->where('kelas', $kelas)
-                ->first();
+            $siswi = Siswi::where('nama', $nama)->where('kelas', $kelas)->first();
             $siswi->delete();
         }
 

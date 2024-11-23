@@ -55,7 +55,7 @@ Route::get('tentang', [PageController::class, 'tentang'])->name('tentang');
 Route::middleware(['auth'])->group(function(){
 //UKS SISWA
 Route::get('ukssiswa', [SiswaController::class, 'index'])->name('ukssiswa');
-Route::get('tmbhsiswa', [SiswaController::class, 'tambah'])->name('tmbhsiswa');
+Route::get('ukssiswa/tmbhsiswa', [SiswaController::class, 'tambah'])->name('tmbhsiswa');
 Route::get('/get-teacher/{nama_kelas}', [SiswaController::class, 'getWaliKelas']);
 
 Route::post('kirimsiswa', [SiswaController::class, 'kirim'])->name('kirimsiswa');
@@ -64,7 +64,7 @@ Route::post('hapussiswa/{id}', [SiswaController::class, 'hapus'])->name('hapussi
 
 // UKS SISWI
 Route::get('ukssiswi', [SiswiController::class, 'index'])->name('ukssiswi');
-Route::get('tmbhsiswi', [SiswiController::class, 'tambah'])->name('tmbhsiswi');
+Route::get('ukssiswi/tmbhsiswi', [SiswiController::class, 'tambah'])->name('tmbhsiswi');
 Route::get('/get-teacher/{nama_kelas}', [SiswiController::class, 'getWaliKelas']);
 
 Route::post('kirimsiswi', [SiswiController::class, 'kirim'])->name('kirimsiswi');
@@ -72,9 +72,9 @@ Route::post('hapussiswi/{id}', [SiswiController::class, 'hapus'])->name('hapussi
 
 //POSKESTREN
 Route::get('dashboard', [AdminController::class, 'poskes'])->name('dashboard');
-Route::get('data_sakit', [PoskesController::class, 'data'])->name('data_sakit');
+Route::get('dashboard/data_sakit', [PoskesController::class, 'data'])->name('data_sakit');
 
-Route::get('konfirmasi/{kelas}/{id}', [PoskesController::class, 'konfirmasi'])->name('konfirmasi');
+Route::get('dashboard/data_sakit/konfirmasi/{kelas}/{id}', [PoskesController::class, 'konfirmasi'])->name('konfirmasi');
 
 Route::post('check', [PoskesController::class, 'check'])->name('check');
 });

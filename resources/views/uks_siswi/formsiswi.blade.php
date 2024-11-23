@@ -2,33 +2,32 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Data Kesehatan</title>
-    <!-- Google Web Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Icon Font Stylesheet -->
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
+
     <link href="{{ asset('dashmin/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
     <link href="{{ asset('dashmin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css')}}" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
+
     <link href="{{ asset('dashmin/css/bootstrap.min.css')}}" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
+
     <link href="{{ asset('dashmin/css/style.css')}}" rel="stylesheet">
 
-    {{-- bootstrap --}}
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    {{-- link jquery --}}
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
@@ -129,34 +128,31 @@
 
 
                     <button type="submit" class="btn btn-primary" style="color: white"><i
-                            class="bi bi-plus-square"></i> Tambah Data</button>
+                            class="bi bi-plus-square"></i>
+                            Tambah Data</button>
                 </form>
             </div>
         </div>
     </div>
 
     <script>
-        // Menggunakan jQuery untuk menangani perubahan pada select kelas
         $('#kelas').change(function() {
-            var kelas = $(this).val(); // Mendapatkan ID kelas yang dipilih
+            var kelas = $(this).val();
 
             if (kelas) {
-                // Jika ada kelas yang dipilih, lakukan request ke server
                 $.ajax({
-                    url: '/get-teacher/' + kelas, // URL untuk mengambil wali kelas
+                    url: '/get-teacher/' + kelas,
                     method: 'GET',
                     success: function(response) {
-                        // Jika ada wali kelas, tampilkan di input text
                         if (response.wali_kelas) {
                             $('#wali_kelas').val(response
-                                .wali_kelas); // Menampilkan nama wali kelas di input text
+                                .wali_kelas);
                         } else {
-                            $('#wali_kelas').val(''); // Kosongkan jika tidak ada wali kelas
+                            $('#wali_kelas').val('');
                         }
                     }
                 });
             } else {
-                // Jika tidak ada kelas yang dipilih, kosongkan input wali kelas
                 $('#wali_kelas').val('');
             }
         });

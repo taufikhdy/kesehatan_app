@@ -15,7 +15,6 @@
 
     <title>Klinik Pratama | AL-ITTIHAD</title>
 
-    <!-- Bootstrap core CSS -->
     <link href="{{ asset('landing/vendor/bootstrap/css/bootstrap.min.css?v2+') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ asset('image/logo.png') }}" type="image/x-icon">
 
@@ -31,7 +30,6 @@ https://templatemo.com/tm-570-chain-app-dev
 
 -->
 
-    <!-- Additional CSS Files -->
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
     <link rel="stylesheet" href="{{ asset('landing/assets/css/templatemo-chain-app-dev.css') }}">
     <link rel="stylesheet" href="{{ asset('landing/assets/css/animated.css') }}">
@@ -141,8 +139,8 @@ https://templatemo.com/tm-570-chain-app-dev
                 </div>
             </div>
         </div>
-        {{-- start team --}}
-        {{-- page one --}}
+
+
         <div class="container mb-5">
             <div class="row">
                 <div class="col-lg-3 wow fadeInRight" data-wow-duration="3s" data-wow-delay="0.5s">
@@ -167,7 +165,8 @@ https://templatemo.com/tm-570-chain-app-dev
                 </div>
             </div>
         </div>
-        {{-- page two --}}
+
+
         <div class="container mb-5">
             <div class="row">
                 <div class="col-lg-3 wow fadeInRight" data-wow-duration="3s" data-wow-delay="0.5s">
@@ -192,7 +191,7 @@ https://templatemo.com/tm-570-chain-app-dev
                 </div>
             </div>
         </div>
-        {{-- page three --}}
+
         <div class="container mb-5 wow fadeInDown" data-wow-duration="3s" data-wow-delay="0.5s">
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-3 col-md-6">
@@ -212,11 +211,11 @@ https://templatemo.com/tm-570-chain-app-dev
                 </div>
             </div>
         </div>
-        {{-- end team --}}
+
 
     </div>
 
-    <!-- Footer Start -->
+    <!-- Footer -->
     <div class="border-top container-fluid bg-white text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s" style="border-top: 2px solid #00bcd4;
            box-shadow: 0 10px 30px rgba(0, 188, 212, 0.6);">
         <div class="container py-5">
@@ -273,7 +272,7 @@ https://templatemo.com/tm-570-chain-app-dev
                 </div> --}}
                 <div class="col-lg-5 col-md-6">
                     <h5 class="mb-4" style="color: #00bcd4">Peta Ponpes Al-Ittihad</h5>
-                    <!-- maps -->
+                    <!-- map -->
                     <div class="row g-0 mx-lg-0">
                         <div class="" style="min-height: 200px;">
                             <div class="position-relative h-100">
@@ -288,7 +287,7 @@ https://templatemo.com/tm-570-chain-app-dev
 
                         </div>
                     </div>
-                    <!-- maps End -->
+                    <!-- map -->
                 </div>
             </div>
         </div>
@@ -311,10 +310,9 @@ https://templatemo.com/tm-570-chain-app-dev
             </div>
         </div>
     </div>
-    <!-- Footer End -->
+    <!-- Footer -->
 
 
-    <!-- Scripts -->
     <script src="{{ asset('landing/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('landing/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('landing/assets/js/owl-carousel.js') }}"></script>

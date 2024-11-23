@@ -21,10 +21,10 @@
 
                     @if ($badgem OR $badgew)
                         <i class="bi bi-bell-fill me-lg-2" id="badge"></i>
-                        <span class="d-none d-lg-inline-flex">Notification</span>
+                        <span class="d-none d-lg-inline-flex">Notifikasi</span>
                     @else
                         <i class="bi bi-bell me-lg-2"></i>
-                        <span class="d-none d-lg-inline-flex">Notification</span>
+                        <span class="d-none d-lg-inline-flex">Notifikasi</span>
                     @endif
 
                 </a>
@@ -42,8 +42,8 @@
                             <small>{{ $notif->tanggal }}</small>
                         </a>
                     @endforeach
-                    <hr class="dropdown-divider">
-                    <a href="#" class="dropdown-item text-center">See all notifications</a>
+                    {{-- <hr class="dropdown-divider">
+                    <a href="#" class="dropdown-item text-center">lihat semua notifikasi</a> --}}
                 </div>
             </div>
         </div>

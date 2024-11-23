@@ -28,9 +28,7 @@
                     <a href="404.html" class="dropdown-item py-1">404 Error</a>
                     <a href="blank.html" class="dropdown-item py-1">Blank Page</a>
                 </div> --}}
-                <a href="/logout" class="nav-item nav-link text-danger"><i class="bi bi-x-circle-fill text-danger">
-                    </i> LOGOUT
-                </a>
+                <a href="/logout" id="logout" class="nav-item nav-link"><i class="bi bi-x-circle"></i> LOGOUT</a>
             </div>
         </div>
     </nav>
