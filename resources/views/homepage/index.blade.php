@@ -14,25 +14,25 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-3 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.5s">
           <div class="service-item first-service">
             <h4>Pola Makan Seimbang <i class="fa-solid fa-utensils" style="size: 50px"></i></h4>
             <p>Konsumsi makanan bergizi dengan proporsi yang tepat. Perbanyak buah, sayuran, protein, dan karbohidrat kompleks. Hindari makanan cepat saji dan terlalu banyak gula.</p>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 wow fadeInUp" data-wow-duration="2.5s" data-wow-delay="0.5s">
           <div class="service-item second-service">
             <h4>Olahraga Teratur<i class="fa-solid fa-person-swimming"></i></h4>
             <p>Lakukan aktivitas fisik setidaknya 30 menit setiap hari. Olahraga seperti jalan kaki, berlari, atau yoga dapat membantu menjaga kesehatan jantung dan meningkatkan daya tahan tubuh. </p>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 wow fadeInUp" data-wow-duration="3s" data-wow-delay="0.5s">
           <div class="service-item third-service">
             <h4>Istirahat Cukup <i class="fa-solid fa-bed"></i></h4>
             <p>Tidur yang cukup dan berkualitas membantu tubuh untuk pulih dan berfungsi optimal. Usahakan tidur 7-8 jam setiap malam untuk menjaga kesehatan mental dan fisik.</p>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 wow fadeInUp" data-wow-duration="3.5s" data-wow-delay="0.5s">
           <div class="service-item fourth-service">
             <h4>Meminum Air Putih Yang Cukup <i class="fa-solid fa-whiskey-glass"></i></h4>
             <p>Pastikan tubuh terhidrasi dengan baik dengan minum air putih setidaknya 8 gelas sehari. Air membantu proses detoksifikasi dan menjaga fungsi organ tubuh.</p>
@@ -79,11 +79,6 @@
             <div class="col-lg-12">
               <p>Dengan menjaga kesehatan, Anda tidak hanya meningkatkan kualitas hidup Anda saat ini tetapi juga memastikan masa depan yang lebih baik dan lebih bahagia.</p>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="right-image">
-            {{-- <img src="assets/images/about-right-dec.png" alt=""> --}}
           </div>
         </div>
       </div>
