@@ -51,10 +51,12 @@ https://templatemo.com/tm-570-chain-app-dev
 
         .lah {
             color: gray;
+            transition: all .2s
         }
 
         .lah:hover {
             color: #00bcd4;
+            letter-spacing: 5px;
         }
 
         .faris {
@@ -141,72 +143,21 @@ https://templatemo.com/tm-570-chain-app-dev
         </div>
 
 
-        <div class="container mb-5">
-            <div class="row">
-                <div class="col-lg-3 wow fadeInRight" data-wow-duration="3s" data-wow-delay="0.5s">
-                    <div class="service-item first-service">
-                        <h4>Name Of Members</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 wow fadeInDown" data-wow-duration="3s" data-wow-delay="0.5s">
-                    <div class="service-item second-service">
-                        <h4>Name Of Members</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="service-item third-service wow fadeInDown" data-wow-duration="3s" data-wow-delay="0.5s">
-                        <h4>Name Of Members</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="service-item fourth-service wow fadeInLeft" data-wow-duration="3s" data-wow-delay="0.5s">
-                        <h4>Name Of Members</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="container mb-5">
-            <div class="row">
-                <div class="col-lg-3 wow fadeInRight" data-wow-duration="3s" data-wow-delay="0.5s">
-                    <div class="service-item first-service">
-                        <h4>Name Of Members </h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 wow fadeInUp" data-wow-duration="3s" data-wow-delay="0.5s">
-                    <div class="service-item second-service">
-                        <h4>Name Of Members</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="service-item third-service wow fadeInUp" data-wow-duration="3s" data-wow-delay="0.5s">
-                        <h4>Name Of Members </h4>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="service-item fourth-service wow fadeInLeft" data-wow-duration="3s" data-wow-delay="0.5s">
-                        <h4>Name Of Members</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container mb-5 wow fadeInDown" data-wow-duration="3s" data-wow-delay="0.5s">
+        <div class="container mb-5 wow fadeInDown text-center" data-wow-duration="3s" data-wow-delay="0.5s">
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-3 col-md-6">
                     <div class="service-item first-service">
-                        <h4>Name Of Members</h4>
+                        <h4>Michail Ibnu Qalbi</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="service-item second-service">
-                        <h4>Name Of Members</h4>
+                        <h4>Abdul Muhith Faris Musyaffa</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="service-item third-service">
-                        <h4>Name Of Members</h4>
+                        <h4>Taufik Hidayat</h4>
                     </div>
                 </div>
             </div>
@@ -299,7 +250,6 @@ https://templatemo.com/tm-570-chain-app-dev
                         Copyright &copy; 2024, <a href="https://smk-alittihad.sch.id/">SMKS AL-ITTIHAD</a>
                     </div>
                     <div class="col-md-6 text-center text-md-end text-muted">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         Developed By: <a href="#">Three Persons</a>
                         <br>
                         Distributed By: <a href="#" target="">Pondok Pesantren Al-Ittihad</a>

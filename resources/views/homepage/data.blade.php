@@ -56,7 +56,7 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody class="text-center">
-                                                            @foreach ($sakit as $no => $sakit)
+                                                            @foreach ($siswasakit as $no => $sakit)
                                                                 <tr>
                                                                     <td>{{$no + 1}}</td>
                                                                     <td>{{$sakit->nama}}</td>
@@ -101,7 +101,7 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody class="text-center">
-                                                            @foreach ($siswaberobat as $no => $item)
+                                                            @foreach ($siswa as $no => $item)
                                                                 <tr>
                                                                     <td>{{ $no + 1 }}</td>
                                                                     <td>{{ $item->nama }}</td>
@@ -217,7 +217,7 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody class="text-center">
-                                                            @foreach ($siswiberobat as $no => $item)
+                                                            @foreach ($siswi as $no => $item)
                                                                 <tr>
                                                                     <td>{{ $no + 1 }}</td>
                                                                     <td>{{ $item->nama }}</td>

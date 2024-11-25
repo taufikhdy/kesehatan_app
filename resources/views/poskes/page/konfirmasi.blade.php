@@ -87,8 +87,8 @@
 
                 <div class="mb-5">
                     <label for="tgl_berobat" class="form-label">tgl_berobat Berobat</label>
-                    <input type="text" name="tgl_berobat" id="tgl_berobat" value="{{ today()->toDateString()}}"
-                        class="form-control @error('tgl_berobat') is-invalid @enderror" readonly required>
+                    <input type="date" name="tgl_berobat" id="tgl_berobat"
+                        class="form-control @error('tgl_berobat') is-invalid @enderror" required>
                     @error('tgl_berobat')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror

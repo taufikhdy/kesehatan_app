@@ -59,6 +59,6 @@ class PoskesController extends Controller
             $siswi->delete();
         }
 
-        return redirect()->route('data_sakit');
+            return redirect()->route('data_sakit');
     }
 }

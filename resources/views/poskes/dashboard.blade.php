@@ -35,16 +35,18 @@
         @keyframes badge {
 
             0% {
-                transform: scale(1);
+                transform: rotate(30deg);
+                color: grey
             }
 
             50% {
+                transform: rotate(-30deg);
                 background-color: orange;
-                color: white
+                color: red;
             }
 
             100% {
-                transform: scale(1.1)
+                transform: rotate(30deg);
             }
         }
 

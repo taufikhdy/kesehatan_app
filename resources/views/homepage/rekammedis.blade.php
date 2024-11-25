@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="home-tab">
-            <div class="d-sm-flex align-items-center justify-content-between border-bottom wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+            <div class="d-sm-flex align-items-center justify-content-between border-bottom wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#rekammedissiswa" role="tab" aria-controls="rekammedissiswa" aria-selected="true"><i class="fas fa-person"></i>  <i class="fas fa-stethoscope"></i>  Rekam Medis Pasien Siswa</a>

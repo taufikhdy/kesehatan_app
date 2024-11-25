@@ -53,7 +53,7 @@ class SiswaController extends Controller
 
         Siswa::create($request->all());
 
-        return redirect()->route('ukssiswa')->with('success', 'Patient added successfully.');
+        return redirect()->route('ukssiswa')->with('success', 'siswa berhasil ditambahkan');
 
     }
 
@@ -65,7 +65,7 @@ class SiswaController extends Controller
         $siswa = Siswa::findOrFail($id);
         $siswa->delete();
 
-        return redirect()->route('ukssiswa')->with('success', 'Patient deleted successfully.');
+        return redirect()->route('ukssiswa')->with('success', 'siswa berhasil ditambahkan');
     }
 
 }

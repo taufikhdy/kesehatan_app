@@ -108,7 +108,7 @@
                         <label for="status" class="form-label">Status Pengobatan</label>
                         <input type="text" name="status" id="status"
                             class="form-control @error('status') is-invalid @enderror" required readonly
-                            value="Belum Berobat">
+                            value="Berobat Ringan dari UKS (belum berobat)">
                         @error('status')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
