@@ -97,7 +97,7 @@
                                     <th>Option</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="text-center">
                                 @foreach($siswaberobat as $no=>$item)
                                 <tr style="font-size: 14px">
                                     <td>{{ $no+1 }}</td>
@@ -135,7 +135,7 @@
                                     <th>Option</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="text-center">
                                 @foreach($siswiberobat as $no=>$item)
                                 <tr style="font-size: 14px">
                                     <td>{{ $no+1 }}</td>

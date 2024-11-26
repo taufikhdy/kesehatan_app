@@ -53,23 +53,28 @@ https://templatemo.com/tm-570-chain-app-dev
                         <div class="col-md-3">
                             <div class="mb-3">
                                 <label for="validationCustom01" class="form-label">Nama Lengkap</label>
-                                <input type="text" class="form-control text-dark" id="validationCustom01" value="{{ $siswaberobat->nama }}" readonly>
+                                <input type="text" class="form-control text-dark" id="validationCustom01"
+                                    value="{{ $siswaberobat->nama }}" readonly>
                             </div>
                             <div class="mb-3">
                                 <label for="validationCustom01" class="form-label">Kelas</label>
-                                <input type="text" class="form-control text-dark" id="validationCustom01" value="{{ $siswaberobat->kelas }}" readonly>
+                                <input type="text" class="form-control text-dark" id="validationCustom01"
+                                    value="{{ $siswaberobat->kelas }}" readonly>
                             </div>
                             <div class="mb-3">
                                 <label for="validationCustom01" class="form-label">Wali Kelas</label>
-                                <input type="text" class="form-control text-dark" id="validationCustom01" value="{{ $siswaberobat->wali_kelas }}" readonly>
+                                <input type="text" class="form-control text-dark" id="validationCustom01"
+                                    value="{{ $siswaberobat->wali_kelas }}" readonly>
                             </div>
                             <div class="mb-3">
                                 <label for="validationCustom01" class="form-label">Keluhan</label>
-                                <input type="text" class="form-control text-dark" id="validationCustom01" value="{{ $siswaberobat->keluhan }}" readonly>
+                                <input type="text" class="form-control text-dark" id="validationCustom01"
+                                    value="{{ $siswaberobat->keluhan }}" readonly>
                             </div>
                             <div class="mb-3">
                                 <label for="validationCustom01" class="form-label">Status Pengobatan</label>
-                                <input type="text" class="form-control text-dark" id="validationCustom01" value="{{ $siswaberobat->status }}" readonly>
+                                <input type="text" class="form-control text-dark" id="validationCustom01"
+                                    value="{{ $siswaberobat->status }}" readonly>
                             </div>
                         </div>
 
@@ -77,22 +82,26 @@ https://templatemo.com/tm-570-chain-app-dev
                         <div class="col-md-3">
                             <div class="mb-3">
                                 <label for="" class="form-label">Tanggal Sakit</label>
-                                <input type="text" class="form-control text-dark" id="" value="{{ $siswaberobat->tgl_sakit }}" readonly>
+                                <input type="text" class="form-control text-dark" id=""
+                                    value="{{ $siswaberobat->tgl_sakit }}" readonly>
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label">Tanggal Berobat</label>
-                                <input type="text" class="form-control text-dark" id="" value="{{ $siswaberobat->tgl_berobat }}" readonly>
+                                <input type="text" class="form-control text-dark" id=""
+                                    value="{{ $siswaberobat->tgl_berobat }}" readonly>
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label">Nama Obat</label>
-                                <input type="text" class="form-control text-dark" id="" value="{{ $siswaberobat->obat }}" readonly>
+                                <input type="text" class="form-control text-dark" id=""
+                                    value="{{ $siswaberobat->obat }}" readonly>
                             </div>
                         </div>
                         <!-- Card Body Ketiga -->
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="" class="form-label">Catatan Dokter</label>
-                                <textarea class="form-control text-dark" cols="30" rows="5" readonly>{{ $siswaberobat->catatan }}</textarea>
+                                <textarea class="form-control text-dark" cols="30" rows="5"
+                                    readonly>{{ $siswaberobat->catatan }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -102,7 +111,8 @@ https://templatemo.com/tm-570-chain-app-dev
             {{-- Tombol Cetak --}}
             <div class="d-flex mt-3">
                 <button class="btn btn-primary me-2" onclick="printTable()"><i class="fas fa-print"></i> Cetak</button>
-                <a href="{{ route('fullrekammedis') }}" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Kembali</a>
+                <a href="{{ route('fullrekammedis') }}" class="btn btn-secondary"><i class="fas fa-arrow-left"></i>
+                    Kembali</a>
             </div>
         </div>
 
@@ -118,10 +128,13 @@ https://templatemo.com/tm-570-chain-app-dev
         <!-- Styling khusus untuk cetak -->
         <style>
             @media print {
+
                 /* Atur margin halaman cetak */
                 @page {
-                    size: landscape; /* Ubah ke 'landscape' jika perlu */
-                    margin: 15mm; /* Margin kertas */
+                    size: ;
+                    /* Ubah ke 'landscape' jika perlu */
+                    margin: 10mm;
+                    /* Margin kertas */
                 }
 
                 /* Sembunyikan tombol dan elemen di luar area cetak */
@@ -130,7 +143,8 @@ https://templatemo.com/tm-570-chain-app-dev
                 }
 
                 /* Tampilkan hanya area cetak */
-                #printArea, #printArea * {
+                #printArea,
+                #printArea * {
                     visibility: visible;
                 }
 
@@ -147,16 +161,24 @@ https://templatemo.com/tm-570-chain-app-dev
                     font-weight: bold;
                 }
 
-                input, textarea {
+                input,
+                textarea {
                     border: none;
                     background-color: transparent !important;
                     box-shadow: none !important;
                 }
+
+                .foot{
+                    display: none;
+                }
             }
         </style>
-    @include('homepage.bagian.footer')
 
-</div>
+        <div class="foot">
+            @include('homepage.bagian.footer')
+        </div>
+
+    </div>
 
     <script src="{{ asset('landing/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('landing/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

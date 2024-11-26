@@ -42,7 +42,7 @@
                             </li>
                             <li class="nav-item align-items-center">
                                 <a class="nav-link btn text-white" href="{{ route('login2') }}">
-                                    <i class="fa fa-sign-in-alt"></i> Sign In Now
+                                    <i class="fa fa-sign-in-alt"></i> Login
                                 </a>
                             </li>
                         </ul>

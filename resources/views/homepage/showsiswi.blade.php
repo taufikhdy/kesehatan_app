@@ -120,8 +120,8 @@ https://templatemo.com/tm-570-chain-app-dev
             @media print {
                 /* Atur margin halaman cetak */
                 @page {
-                    size: landscape; /* Ubah ke 'landscape' jika perlu */
-                    margin: 15mm; /* Margin kertas */
+                    size: ; /* Ubah ke 'landscape' jika perlu */
+                    margin: 10mm; /* Margin kertas */
                 }
 
                 /* Sembunyikan tombol dan elemen di luar area cetak */
@@ -152,10 +152,15 @@ https://templatemo.com/tm-570-chain-app-dev
                     background-color: transparent !important;
                     box-shadow: none !important;
                 }
+
+                .foot{
+                    display: none;
+                }
             }
         </style>
-    @include('homepage.bagian.footer')
-
+    <div class="foot">
+        @include('homepage.bagian.footer')
+    </div>
 </div>
 
     <script src="{{ asset('landing/vendor/jquery/jquery.min.js') }}"></script>
